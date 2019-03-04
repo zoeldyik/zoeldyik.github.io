@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pure CSS Responsive Image Slider</title>
+<style>
+ 
+
+
+    .container2{
+        width: 70%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .content2{
+        width: 400%;
+        position: relative;
+        top: 0;
+        left: 0;
+        animation: slide2 18s infinite;
+    }
+
+    .content2 img{
+        float: left;
+        width: 25%;
+    }
+    .gambar{
+        position: relative;
+    }
+    p{
+        position: absolute;
+        z-index: 999;
+        top: 40px;
+        color: black;
+    }
+
+
+
+    @keyframes slide2{
+        0{
+            left: 0;
+        }
+        28%{
+            left: 0;
+        }
+        33%{
+            left: -100%;
+        }
+        61%{
+            left: -100%;
+        }
+        66%{
+            left: -200%;
+        }
+        95%{
+            left: -200%;
+        }
+        100%{
+            left: -300%;
+        }
+
+    }
+</style>
+</head>
+<body>
+
+ 
+
+    <div class="container2">
+        <div class="content2">
+            <div class="gambar">
+                <img src="img/desk.png" alt="">
+            </div>
+            <div class="gambar">
+                <img src="img/desk2.png" alt="">
+            </div>
+            <div class="gambar">
+                <img src="img/desk3.png" alt="">
+            </div>
+            <div class="gambar">
+                <img src="img/desk.png" alt="">
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <button type="button" ><a href="index.html">kembali</a></button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

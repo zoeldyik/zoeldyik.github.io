@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section{
+            width: 300px;
+            position: relative;
+            margin: 30px;
+            float: left;
+            cursor: pointer;
+        }
+        img{
+            width: 100%;
+        }
+        .teks{
+            position: absolute;
+            top: 0;
+            left:0;
+            bottom: 0;
+            right: 0;
+            color: azure;
+            padding: 44px 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            opacity: 0 ;
+            pointer-events: none;
+            font-size: 13px;
+        }
+        
+        /* cara bacanya */
+        /* saat section di target melalui link yang kita klik
+        ubah display class teks yang ada di dalam section menjadi block 
+        di sini link kita adalah gambar*/
+        section:target .teks{
+            opacity: 1;
+        }
+
+        /* cara bacanya */
+        /* saat class teks di target melalui link yang kita klik
+        ubah display class teks menjadi block 
+        di sini link kita adalah gambar*/
+        .teks:target{
+            opacity: 1;
+        }
+
+        /* bagian accordion */
+
+        .clear{
+            clear: both;
+        }
+
+        .container{
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .container a{
+            text-decoration: none;
+            text-align: center;
+        }
+        .container p{
+            display: none;
+        }
+
+        /* cara bacanya */
+        /* saat tag P di target melalui link yang kita klik
+        ubah display p menjadi block */
+        p:target{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- style pada target dapat berfungsi saat saat id element yang kita target tampil di URI
+    melalui fungsi link -->
+    <!-- di bawah ini contoh yang saya buat
+    yang mana id satu berbeda penempatan atribut ID dari section lainnya -->
+
+    <section id="1">
+        <a href="#1">
+            <img src="img/3.jpg" alt="">
+        </a>
+        
+
+        <div class="teks" >
+            <p>Lorem ipsum dolor Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis doloribus praesentium earum ipsum dolor in? Quos recusandae illum explicabo vitae sequi ad ipsam ab assumenda doloribus, corporis fuga repellendus officiis maiores illo aliquid esse reprehenderit numquam temporibus minima maxime.</p>
+        </div>        
+    </section>
+
+    <section>
+        <a href="#2">
+            <img src="img/4.jpg" alt="">
+        </a>
+        
+
+        <div class="teks" id="2">
+            <p>Lorem ipsum dolor Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis doloribus praesentium earum ipsum dolor in? Quos recusandae illum explicabo vitae sequi ad ipsam ab assumenda doloribus, corporis fuga repellendus officiis maiores illo aliquid esse reprehenderit numquam temporibus minima maxime.</p>
+        </div>        
+    </section>
+
+    <section>
+        <a href="#3">
+            <img src="img/2.jpg" alt="">
+        </a>
+        
+
+        <div class="teks" id="3">
+            <p>Lorem ipsum dolor Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis doloribus praesentium earum ipsum dolor in? Quos recusandae illum explicabo vitae sequi ad ipsam ab assumenda doloribus, corporis fuga repellendus officiis maiores illo aliquid esse reprehenderit numquam temporibus minima maxime.</p>
+        </div>        
+    </section>
+
+
+
+    <div class="clear"></div>
+
+    <br><br><br>
+
+    <div class="container">
+        <div class="wrap">
+            <a href="#p1"><h1>tampilkan paragraf1</h1></a>
+            <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate dolores culpa laborum sed unde sunt dolor beatae consectetur sint cum. Eveniet architecto voluptates culpa dolores iusto, aut enim alias vel!</p>
+        </div>
+        <div class="wrap">
+            <a href="#p2"><h1>tampilkan paragraf2</h1></a>
+            <p id="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate dolores culpa laborum sed unde sunt dolor beatae consectetur sint cum. Eveniet architecto voluptates culpa dolores iusto, aut enim alias vel!</p>
+        </div>
+        <div class="wrap">
+            <a href="#p3"><h1>tampilkan paragraf2</h1></a>
+            <p id="p3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate dolores culpa laborum sed unde sunt dolor beatae consectetur sint cum. Eveniet architecto voluptates culpa dolores iusto, aut enim alias vel!</p>
+        </div>
+    </div>
+    
+    <button type="button" ><a href="index.html">kembali</a></button>
+</body>
+</html>

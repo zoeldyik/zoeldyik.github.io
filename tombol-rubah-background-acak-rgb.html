@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>latihan JS</title>
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /*membuat child element dari body mewnjadi kolom*/
+            justify-content: center;
+            /*membuat child element dari body berada tepat di tengah halaman*/
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>rubah warna backkground halaman dengan RGB</h1> <br>
+    <button>tombol rubah background halaman</button>
+
+    <script>
+        const h1 = document.querySelector('h1');
+        const button = document.querySelector('button');
+        const body = document.querySelector('body');
+
+
+        // fungsi ganti warna
+        button.addEventListener('click', function () {
+            // agar memilih angka random untuk setiap variabel
+            // 'Math.random()' mengembalikan angka random dari 0 s.d 1
+            // 'Math.random() * 255 + 1' mengembalikan angka random dari 1 s.d 255 
+            // "math.floor()' pembulatan ke bawah
+            let red = Math.floor(Math.random() * 255 + 1);
+            let green = Math.floor(Math.random() * 255 + 1);
+            let blue = Math.floor(Math.random() * 255 + 1);
+
+
+            // backgroundcolor di beri nilai menggunakan 'rgb', dengan nilai variabel acak dengan method dsi atas
+            body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+
+        })
+    </script>
+</body>
+
+</html>

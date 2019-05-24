@@ -27,7 +27,8 @@
 <body>
 
 
-    <h1>rubah warna backkground halaman dengan RGB</h1> <br>
+    <h1>rubah warna backkground halaman dengan RGB</h1>
+    <div id=nilaiRGB></div>
     <button>tombol rubah background halaman</button>
 
     <script>
@@ -49,6 +50,9 @@
 
             // backgroundcolor di beri nilai menggunakan 'rgb', dengan nilai variabel acak dengan method dsi atas
             body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+            
+            let item = '<h2>' + 'RGB : ' + red + ' ' + green + ' ' + blue + '</h2>';
+            nilaiRGB.innerHTML = item;
 
         })
     </script>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>latihan jquery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            box-sizing: border-box;
+        }
+        hr{
+            display: block;
+            margin: 20px 0;
+        }
+        .accordion h1 {
+            text-align: center;
+            margin: 50px;
+        }
+
+        .accordion .card {
+            margin: auto;
+            width: 250px;
+            box-sizing: border-box;
+            background-color: deepskyblue;
+            overflow: hidden;
+            border: 1px solid deepskyblue;
+        }
+
+        .accordion h2 {
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            pointer-events: none;
+        }
+
+        .accordion p {
+            margin: 10px;
+            text-align: justify;
+            display: none;
+        }
+
+        /* style untuk bagian hide and show */
+        .hide-and-show > *{
+            margin: 20px;
+        }
+        .hide-and-show h3{
+            text-align: center;
+        }
+        .hide-and-show .card{
+            width: 50%;
+            margin: auto;
+        }
+
+        input{
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .hide-and-show p{
+            display: none;
+        }
+
+        /* <!--style menampilkan dan menyembunyikan konten --> */
+        .container{
+            padding: 20px;
+            background-color: indianred;
+            color: white;
+            margin: 40px 100px;
+            cursor: pointer;
+        }
+        .container h3{
+            margin: 5px;
+        }
+        .show-inside{
+            display:block;
+            margin: 20px auto;
+            padding: 5px;
+        }
+        /* class untuk javascript */
+        .background{
+            background-color:white;
+            color:indianred;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        /* hide content dengan jquery DOM traversal */
+        .container-kartu{
+            margin: auto;
+            padding: 10px;
+        }
+        .kartu{
+            float: left;
+            width: 40%;
+            background-color: forestgreen;
+            box-sizing: border-box;
+            position: relative;
+            padding-right: 20px;
+            margin-top: 10px;
+            padding: 20px;
+        }
+        .kartu:first-child,
+        .kartu:nth-child(3n){
+            margin-left: 9%;
+            margin-right: 2%;
+            background-color: lightcoral;
+        }
+        .kartu .close{
+            display: block;
+            padding: 5px;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            z-index: 99;
+            color: white;
+            background-color:black;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;           
+        }
+        .clear{
+            clear: both;
+        }
+  
+
+        /* kembali ke index */
+        button{
+            margin: 40px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion">
+        <h1>acordion dengan jquery</h1>
+        <div class="card">
+            <div class="tombol">
+                <h2>click to hide / show</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur culpa iure accusantium,
+                natus
+                vel earum id, quas ab quia laudantium quibusdam delectus officia odio, quae quos maxime commodi totam.</p>
+        </div>
+
+        <div class="card">
+            <div class="tombol">
+                <h2>click to hide / show</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur culpa iure accusantium,
+                natus
+                vel earum id, quas ab quia laudantium quibusdam delectus officia odio, quae quos maxime commodi totam.</p>
+        </div>
+    </div>
+    <hr>
+
+    <br><br><br>
+
+    <div class="hide-and-show">
+        <h3>klik saya untuk menghide saya</h3>
+        <div class="card">
+            <input type="button" value="klik untuk show teks">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ipsum nam, error laborum quod cum
+                laudantium incidunt illo impedit, distinctio molestias eaque dolor quia voluptas! Vitae voluptates
+                maxime debitis minima!</p>
+        </div>
+    </div>
+    <hr>
+
+    <!-- menampilkan semua konten -->
+    <div class="container">
+        <h3 style="text-align:center;">klik teks di bawah ini untuk menghilangkannya</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, saepe.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <P>Lorem ipsum, dolor sit amet consectetur adipisicing.</P>
+    </div>
+    <button class="show-inside">munculkan semua isi container</button>
+
+    <hr>
+
+    <br><br><br><br>
+
+
+    <!-- hide content dengan jquery DOM traversal -->
+    <div class="container-kartu">
+
+        <div class="kartu">
+            <span class="close">x</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quo qui unde asperiores! Accusantium
+                suscipit, corrupti quos cum laborum, blanditiis pariatur similique aperiam fugit aliquam unde. Nam
+                voluptatibus nesciunt eveniet?</p>
+        </div>
+
+        <div class="kartu">
+            <span class="close">x</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quo qui unde asperiores! Accusantium
+                suscipit, corrupti quos cum laborum, blanditiis pariatur similique aperiam fugit aliquam unde. Nam
+                voluptatibus nesciunt eveniet?</p>
+        </div>
+
+        <div class="kartu">
+            <span class="close">x</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quo qui unde asperiores! Accusantium
+                suscipit, corrupti quos cum laborum, blanditiis pariatur similique aperiam fugit aliquam unde. Nam
+                voluptatibus nesciunt eveniet?</p>
+        </div>
+
+        <div class="kartu">
+            <span class="close">x</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quo qui unde asperiores! Accusantium
+                suscipit, corrupti quos cum laborum, blanditiis pariatur similique aperiam fugit aliquam unde. Nam
+                voluptatibus nesciunt eveniet?</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <br><br><br><br><br>
+
+
+    <button><a href="index.html">kembali</a></button>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // script untuk accordion
+            $(".card .tombol").click(function () {
+                $(this).next().slideToggle();
+            });
+
+            // script hide-and-show
+            $(".hide-and-show h3").click(function () {
+                $(this).hide();
+            });
+
+            $(".hide-and-show input").click(function () {
+                $(".hide-and-show p").show();
+            });
+
+            // menyembunyikan .container p
+            $(".container p").click(function () {
+                $(this).hide();
+            });
+            // menampilkan background saat di hover
+            $(".container p").hover(function () {
+                $(this).toggleClass("background");
+            });
+
+            // memuncul isi container saat semua sudah di hide
+            $(".show-inside").click(function () {
+                $(".container p").show();
+            });
+
+            // hide content dengan jquery DOM traversal
+
+            // $(".kartu .close").click(function () {
+            //     $(this).parent().hide();
+            // });
+        });
+
+
+
+        // hide content dengan javascript
+        const close = document.querySelectorAll(".close");
+
+
+        close.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                btn.parentElement.classList.add("hide");
+            });
+        });
+    </script>
+</body>
+
+</html>

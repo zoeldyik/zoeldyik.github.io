@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-transform: capitalize;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .container {
+            width: 70%;
+            padding: 50px 0 50px 0;
+            background-color: dodgerblue;
+            color: #ffffff;
+            text-transform: capitalize;
+            box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        #counter {
+            font-size: 3rem;
+        }
+
+        button {
+            background-color: #ffffff;
+            color: darksalmon;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            border-radius: 3px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>add and minus button</h1>
+        <div class="counterBox">
+            <h1>counter</h1>
+            <h1 id="counter">0</h1>
+        </div>
+        <div class="buttons">
+
+            <button type="button" id=lowercounter>lower count</button>
+            <button type="button" id="addcounter">add count</button>
+        </div>
+    </div>
+
+
+    <script>
+        let counter = document.querySelector('#counter');
+        const addcounter = document.querySelector('#addcounter');
+        const lowercounter = document.querySelector('#lowercounter');
+
+        let count = 0;
+
+        addcounter.addEventListener('click', incrementCounter);
+        lowercounter.addEventListener('click', decrementCounter);
+
+
+        function incrementCounter() {
+            // setiap tombol addcounter di klik
+            // tambah nilai counter dengan cara increment variabel "count"
+            // dan berikan nilainya kepada variabel 'counter'
+            count++;
+            // "count++" adalah bahasa simplenya dari "count = count + 1"
+            counter.innerHTML = count;
+
+            // jika nilai counter lebih dari 0
+            // rubah warnanya menjadi hijau
+            if (counter.innerHTML > 0) {
+                counter.style.color = "greenyellow";
+            }
+            else if (counter.innerHTML == 0) {
+                counter.style.color = "white";
+            }
+        }
+
+        function decrementCounter() {
+            // setiap tombol addcounter di klik
+            // tambah nilai counter dengan cara decrement variabel "count"
+            // dan berikan nilainya kepada variabel 'counter'
+            count--;
+            counter.innerHTML = count;
+
+            // jika nilai counter kurang dari 0
+            // rubah warnanya
+            if (counter.innerHTML < 0) {
+                counter.style.color = "deeppink";
+            }
+            else if (counter.innerHTML == 0) {
+                counter.style.color = "white";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

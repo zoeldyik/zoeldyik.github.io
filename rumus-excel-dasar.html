@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: capitalize;
+            color: darksalmon;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        .content {
+            padding: 1.5rem;
+        }
+
+        .content:nth-child(odd) {
+            background-color: darksalmon;
+        }
+    </style>
+    <title>rumus excel dasar</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>RUMUS EXCEL DASAR</h1>
+        <div class="content">
+            <H3>MAX</H3>
+            <h4>=MAX(A1-A4)</h4>
+            <P>mengembalikan nilai terbesar mulai dari cell A1 s/d A4</P>
+        </div>
+
+        <div class="content">
+            <H3>MIN</H3>
+            <h4>=MIN(A1-A4)</h4>
+            <P>mengembalikan nilai terkecil mulai dari cell A1 s/d A4</P>
+        </div>
+
+        <div class="content">
+            <h3>IF</h3>
+            <h4>=IF(Kriteria, nilai-jika-true, nilai-jika-false)</h4>
+            <h4>=IF(A1="Apel", "buah", "bukan buah")</h4>
+            <p>jika nilai A1 adalah Apel kembalikan nilai "buah" jika tidak kembalikan nilai "bukan buah"
+                <br> LINK VIDEO IF
+            </p>
+            <a href="https://support.office.com/id-id/article/if-fungsi-if-69aed7c9-4e8a-4755-a9bc-aa8bbff73be2?ui=id-ID&rs=id-ID&ad=ID
+            ">
+                link video
+            </a>
+
+
+        </div>
+
+        <div class="content">
+            <h3>SUM</h3>
+            <h4>=SUM(A1-A3)</h4>
+            <p>
+                jumlahkan angka mulai dari cell A1 s/d A3
+            </p>
+        </div>
+
+        <div class="content">
+            <h3>SUMIF</h3>
+
+            <h4>=SUMIF(range, criteria, sum-range)</h4>
+            <h4>=SUMIF(A1:A8, "keju", B1:B8)</h4>
+
+            <p>menjumlahkan cell dari B1 s/d B8 yang memenuhi kriteria "keju" dari cell A1 s/d A8
+                <br> LINK video SUMIF
+            </p>
+            <a
+                href="https://support.office.com/id-id/article/sumif-c44b60c3-c9f4-4789-80fe-28a07f9b75b1?ui=id-ID&rs=id-ID&ad=ID">
+                link video
+            </a>
+
+
+        </div>
+
+
+        <div class="content">
+            <h3>AVERAGE</h3>
+            <h4>=AVERAGE(A1-A3)</h4>
+            <p>
+                <br> menghitung nilai rata2 dari mulai dari cell A1 s/d A3
+            </p>
+        </div>
+
+
+        <div class="content">
+            <h3>COUNT</h3>
+            <h4>=COUNT(A1-A3)</h4>
+            <p> menmenghitung banyaknya data pada cell A1 s/d A3</p>
+        </div>
+
+        <div class="content">
+            <h3>COUNTIF</h3>
+            <h4>=COUNTIF(A1-A3, 20)</h4>
+
+            <p>menmenghitung berapa kali angka 20 muncul dari cell A1 s/d A3</p>
+            <h4>=COUNTIF(A1-A3, "APEL")</h4>
+
+            <p>menmenghitung berapa kali kata APEL muncul dari cell A1 s/d A3 (untuk mencari teks harus menggunakan
+                kutip)</p>
+
+            <h4>=COUNTIF(A1-A3, ">60")</h4>
+            <p>menmenghitung berapa kali angka yang lebih besar dari 60 muncul dari cell A1 s/d A3 (jika kriteria
+                menggunakan operator matematik harus menggunakan kutip)</p>
+
+            <p>LINK video COUNTIF</p>
+
+            <a
+                href="https://support.office.com/id-id/article/countif-fungsi-countif-e0de10c6-f885-4e71-abb4-1f464816df34?ui=id-ID&rs=id-ID&ad=ID">
+                link video
+            </a>
+
+
+        </div>
+
+        <div class="content">
+            <h3>MENGHITUNG SELISIH ANTARA DUA TANGGAL</h3>
+            <a
+                href=" https://support.office.com/id-id/article/menghitung-selisih-antara-dua-tanggal-8235e7c9-b430-44ca-9425-46100a162f38?ui=id-ID&rs=id-ID&ad=ID">
+                link tutorial
+            </a>
+        </div>
+
+        <div class="content">
+            <h3>CELL ABSOLUTE DAN CELL RELATIF</h3>
+            <a
+                href="https://support.office.com/id-id/article/beralih-antara-referensi-relatif-absolut-dan-campuran-dfec08cd-ae65-4f56-839e-5f0d8d0baca9">
+                link tutorial
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

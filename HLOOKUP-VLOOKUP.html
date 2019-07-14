@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>HLOOKUP DAN VLOOKUP</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center mb-sm-4 text-info">HLOOKUP DAN VLOOKUP</h1>
+
+        <div class="content bg-info text-white p-sm-5 p-2">
+            <h2 class="mb-3">VLOOKUP</h2>
+            <p>Fungsi pencarian pada data yang berbentuk KOLOM / VERTICAL</p>
+            <h4 class="mb-3">Rumus:
+                <br> =VLOOKUP(lookup value, table array, col-index-num, range lookup)
+            </h4>
+            <p>
+                1. LOOKUP VALUE adalah data yang akan dicocokkan. <br>
+                2. TABEL ARRAY adalah tempat pencarian data dimulai dari colom yang berisi
+                LOOKUP VALUE sampai kolom yang berisi hasil yang di cari COL INDEX NUM.<br>
+                3. COL INDEX NUM adalah data pada kolom keberapa yang hendak diambil (hasil pencarian). <br>
+                4. RANGE LOOKUP adalah nilai logika yang dimasukkan, jika diisi TRUE maka
+                akan dicari sampai data terdekat (sebagian benar), sedang jika diisi FALSE maka akan dicari data yang
+                persis sama.
+            </p>
+            <img class="img-fluid d-block" src="contoh-vlookup.jpg" alt="vlookup-contoh">
+            <a class="mt-2 btn btn-primary"
+                href="https://support.office.com/id-id/article/video-vlookup-kapan-dan-bagaimana-menggunakannya-9a86157a-5542-4148-a536-724823014785?ui=id-ID&rs=id-ID&ad=ID">
+                link video
+            </a>
+        </div>
+
+        <div class="content p-sm-5 p-2 text-white" style="background-color :rgb(80, 119, 202) ">
+            <h2 class="mb-3">HLOOKUP</h2>
+            <p>HLOOKUP mencari value secara horizontal (dari kiri ke kanan), lalu menampilkan nilai lain yang sekolom
+                dengan nilai tersebut sesuai yang diinginkan.
+            </p>
+            <h4 class="mb-3">
+                Rumus : <br>
+                =HLOOKUP(lookup_value, table_array, row_index_num, range_lookup)
+            </h4>
+            <p>
+                1.LOOKUP VALUE adalah data yang akan dicocokkan. <br>
+                2. TABEL ARRAY adalah tempat pencarian data yang di inginkan <br>
+                3. ROW INDEX NUM yaitu nomor urut row atau baris yang akan kita ambil nilainya sesuai dengan nomor kolom
+                yang ada di tabel. Jika kita isi dengan nilai kurang dari 1 akan menghasilkan ERROR #VALUE!. Sedangkan
+                jika kita isi dengan angka yang lebih besar dari jumlah kolom yang ada dalam tabel, akan menghasilkan
+                error #REFF!. <br>
+                4. RANGE LOOKUP adalah nilai logika yang dimasukkan, jika diisi TRUE maka
+                akan dicari sampai data terdekat (sebagian benar), sedang jika diisi FALSE maka akan dicari data yang
+                persis sama.
+            </p>
+            <img class="img-fluid" src="contoh-hlookup.jpg" alt="contoh-hlookup">
+            <p class="mt-2">
+                Pada ilustrasi di atas, kita akan mencari berapa jumlah penjualan mie instan varian Soto Ayam pada bulan
+                Mei. Output dari rumus HLOOKUP pada cell D14 akan menghasilkan nilai 2200
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

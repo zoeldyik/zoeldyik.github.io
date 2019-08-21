@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>to do app v2</title>
+
+    <style>
+        body {
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: #543864;
+            font-weight: bolder;
+            font-size: 4.7vw;
+            margin: 30px auto 14px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+
+        .container input {
+            width: 60%;
+            padding: 10px;
+        }
+
+        .container button {
+            width: 10%;
+            background-color: #8b4367;
+            color: white;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #8b4367c4;
+            color: white;
+        }
+
+        .list {
+            padding: 4px 20px;
+            font-size: 18px;
+            position: relative;
+            background-color: #8b4367;
+            color: white;
+        }
+
+        .list:nth-child(odd) {
+            background-color: #543864;
+
+        }
+
+        .list .teks:hover {
+            cursor: pointer;
+        }
+
+        .list .delete {
+            position: absolute;
+            right: 20px;
+            font-size: 15px;
+        }
+
+        .list .done {
+            position: absolute;
+            right: 85px;
+            font-size: 15px;
+        }
+
+        .list .delete:hover {
+            color: #ff4893;
+            cursor: pointer;
+        }
+
+        .list .done:hover {
+            color: #32dbc6;
+        }
+
+        .content {
+            width: 100vw;
+            overflow: hidden;
+        }
+    </style>
+
+<body>
+    <h2>My To Do App</h2>
+    <div class="container">
+        <input type="text" name="" id="" placeholder="masukan teks kamu...">
+        <button type="button">Add</button>
+    </div>
+    <div class="content">
+        <!-- <div class="list">
+            <p>ini adalah list pertama <span class="done">done</span><span class="delete">close</span></p>
+        </div> -->
+    </div>
+
+
+
+    <script>
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+        const content = document.querySelector('.content');
+
+        button.addEventListener('click', function () {
+            if (input.value.length == 0) {
+                alert('masukin teks dulu woy');
+            } else {
+                content.insertAdjacentHTML('afterbegin',
+                    '<div class = "list">'
+                    + '<p class="teks">' + input.value + '<span class="done">done</span>'
+                    + '<span class="delete">delete</span></p>'
+                    + '</div>'
+                )
+                input.value = '';
+            }
+        })
+
+
+        // function untuk menghapus list yang di buat oleh event di atas
+        content.addEventListener('click', function (e) {
+
+            if (e.target.classList.contains('delete')) {
+                e.target.parentElement.parentElement.style.display = 'none';
+            } else if (e.target.classList.contains('done')) {
+                e.target.style.display = 'none';
+                e.target.parentElement.parentElement.style.backgroundColor = '#1fab89';
+                // e.target.parentElement.parentElement.style.borderBottom = ' 1px solid white';
+                e.target.parentElement.style.textDecoration = 'line-through';
+            }
+        })
+
+
+
+        // CARA INI TIDAK BERHASIL
+        // menurut saya karena close tidak menyeleksi apa pun di karenakan
+        // close di seleksi sebelum element close di buat 
+        // jika kita console.log(close) panjang nodenya 0 yang berarti tidak ada element yang terseleksi
+
+        // const close = document.querySelectorAll('.close');
+        // close.forEach(cls => {
+        //     cls.addEventListener('click', function () {
+        //         cls.parentElement.parentElement.style.display = 'none';
+        //     })
+        // });
+
+    </script>
+</body>
+
+</html>

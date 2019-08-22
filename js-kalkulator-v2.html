@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>kalkulator v2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+        }
+
+        input {
+            border: 1px solid white;
+            font-size: 23px;
+        }
+
+        .row .col button {
+            border-radius: 0;
+            border: 1px solid white;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div class="container col-8 offset-2 col-sm-6 offset-sm-3">
+
+        <h2 class="text-center text-info">Kalkulator v2</h2>
+
+        <div class="row">
+            <div class="col-12 p-0">
+                <input type="text" class="w-100 px-2 py-3" placeholder="0">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-info w-100 number" data-num='1'>1</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-info w-100 number" data-num='2'>2</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-info w-100 number" data-num='3'>3</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-dark w-100 clear" data-num='c'>C</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-info w-100 number" data-num='4'>4</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-info w-100 number" data-num='5'>5</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-info w-100 number" data-num='6'>6</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-dark w-100 operator" data-num='-'>-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-info w-100 number" data-num='7'>7</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-info w-100 number" data-num='8'>8</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-info w-100 number" data-num='9'>9</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-dark w-100 operator" data-num='+'>+</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-info w-100 number" data-num='0'>0</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-dark w-100 operator" data-num='*'>x</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-dark w-100 operator" data-num='/'>/</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" name="" id="" class="btn btn-secondary w-100 equal" data-num='='>=</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- my script -->
+    <script>
+        // tangkap element
+        const input = document.querySelector('.col-12 input');
+        const container = document.querySelector('.container');
+        // buat variabel
+        let hasil;
+        // beri event pada container
+        container.addEventListener('click', function (e) {
+            // jika e.target adalah salah satu dari element dengan class 'number' atau 'operator'
+            //  tampilkan nilai dari element ke dalam input
+            if (e.target.classList.contains('number') || e.target.classList.contains('operator')) {
+                input.value += e.target.dataset.num;
+                // jika e.target memiliki class 'clear' hapus teks pada input
+            } else if (e.target.classList.contains('clear')) {
+                input.value = '';
+                // jika e.target memiliki class 'equal'
+                // hitung hasil dari yang di tampilkan dalam element input
+            } else if (e.target.classList.contains('equal')) {
+                hasil = eval(input.value);
+                input.value = hasil;
+            }
+        })
+    </script>
+</body>
+
+</html>

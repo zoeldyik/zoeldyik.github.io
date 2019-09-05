@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--------------------------google font------------------------>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
+
+    <title>latihan grid</title>
+
+    <style>
+        body {
+            margin: 10px;
+            padding: 0;
+            display: grid;
+            /* -------------- colom autofit (atomatis menyesuaikan),"minmax(250px,1fr)" jika ruang yg tersedia kurang dari 250px,
+            -----------maka element akan membesar jika ruang yang tersedia sudah mencapai 250px maka akan di buat kolom baru*/
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            /* -------------otomatis membuat baris baru dengan tinggi baris minimal 300px, dan maksimalnya menyesuaikan dengan isi kontennya / auto */
+            grid-auto-rows: minmax(200px, auto);
+            grid-gap: 10px;
+            background-color: rgb(34, 34, 34);
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .teks {
+            grid-column: 1/-1;
+            color: white;
+            align-self: center;
+            justify-self: center;
+
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+        }
+
+        .teks h1 {
+            font-family: 'Righteous', cursive;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        .teks p {
+            text-align: center;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            /*------------------ menjaga aspect ratio image 
+            -----------------dengan membiarkannya di crop otomatis oleh komputer*/
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 20px;
+        }
+
+        .card {
+            background-color: salmon;
+            padding: 3px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            overflow: hidden;
+        }
+
+        .card:nth-child(even) {
+            background: mediumseagreen;
+        }
+
+        .card-body {
+            padding: 0 10px;
+        }
+
+        .card-body p {
+            text-indent: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="teks">
+        <h1>Latihan grid css</h1>
+        <p>try to rezise the browser</p>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/2194062/pexels-photo-2194062.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="">
+        <div class="card-body">
+            <h3>1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae necessitatibus veniam omnis rem. Nemo
+                nam
+                neque tenetur soluta! Asperiores, aperiam.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/2265488/pexels-photo-2265488.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="">
+        <div class="card-body">
+            <h3>2</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, nisi nostrum facilis, delectus
+                magnam
+                quis aperiam enim velit ab similique saepe, iusto amet.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/2115217/pexels-photo-2115217.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="">
+        <div class="card-body">
+            <h3>3</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nemo illo tenetur
+                dignissimos!
+                Sequi totam fuga numquam molestias, doloribus tenetur.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/2148217/pexels-photo-2148217.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="">
+        <div class="card-body">
+            <h3>4</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sapiente similique laudantium tempore
+                voluptatem reiciendis!</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/2506947/pexels-photo-2506947.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="">
+        <div class="card-body">
+            <h3>5</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/2569997/pexels-photo-2569997.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="">
+        <div class="card-body">
+            <h3>6</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="">
+        <div class="card-body">
+            <h3>7</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="">
+        <div class="card-body">
+            <h3>8</h3>
+            <p>Lorem ipsum dolor sit amet consectetur. Lorem, ipsum dolor.</p>
+        </div>
+    </div>
+</body>
+
+</html>

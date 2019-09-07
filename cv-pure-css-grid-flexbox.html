@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cv grid</title>
+    <!-- aos js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!------------------------------- NOTE -->
+    <!------------------ untuk mengatasi masalah overflow pada responsive view karena AOS
+    berikan overflow-x:hidden pada setiap parent element yang anaka element nya diberikan 
+    efek AOS -->
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            scroll-behavior: smooth;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* --------------------------------------------menu button---------------------- */
+        .menu-btn {
+            position: fixed;
+            z-index: 5;
+            top: 0;
+            right: 0;
+            margin: 10px;
+            background-color: rgba(80, 81, 79, 0.6);
+            padding: 3px 5px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .menu-btn a {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+        }
+
+        .menu-btn:hover {
+            background-color: #FDFFF7;
+            font-weight: 700;
+        }
+
+        .menu-btn:hover>a {
+            color: #50514F;
+        }
+
+        /* ---------------------------------------------------------------------------------------- */
+        .header {
+            height: 500px;
+            background-color: rebeccapurple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background: url('img/4.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: aqua;
+            overflow: hidden;
+        }
+
+        .header nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            z-index: 10;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #464655;
+            /* display: none; */
+            margin-left: 30000px;
+            transition: 500ms;
+        }
+
+        .header #mynav:target {
+            /* display: block; */
+            margin-left: 0;
+        }
+
+        .header nav ul {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            /* align-items: center; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header nav ul li {
+            list-style: none;
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        .header nav ul li a {
+            text-decoration: none;
+            color: #FDFFF7;
+        }
+
+        .header nav ul li a:hover {
+            color: #FFB30F;
+        }
+
+        .header .jumbotron>* {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* ---------------------------------------------about------------------------------------------- */
+        .about {
+            overflow-x: hidden;
+            padding: 50px 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .about .about-article {
+            padding: 5px;
+            color: #aeaeae;
+        }
+
+        .about .about-article h5,
+        .about .about-article p {
+            padding: 0;
+            margin: 2px;
+        }
+
+        .about .about-article h5 {
+            font-style: italic;
+            font-weight: 200;
+        }
+
+        /* ---------------------------------------riwayat-------------------------------------- */
+        .riwayat {
+            padding: 50px 0;
+            text-align: center;
+            background: #50514F;
+            overflow: hidden;
+        }
+
+        .riwayat h1 {
+            margin: 40px;
+            color: #FDFFF7;
+        }
+
+        .riwayat .container {
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+            grid-template-columns: 1fr;
+            grid-auto-rows: 250px;
+            grid-gap: 10px;
+            padding: 0 10px;
+            color: #FDFFF7;
+        }
+
+        .riwayat .container .card {
+            background: #C05746;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 15px;
+            border-radius: 20px 0 20px 0;
+            cursor: pointer;
+            transition: all 300ms;
+        }
+
+        .riwayat .card h2 {
+            pointer-events: none;
+        }
+
+        .riwayat .card p {
+            display: none;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .riwayat .card:hover {
+            background-color: rgba(192, 87, 70, 0.8);
+        }
+
+        .riwayat .card:hover>p {
+            display: block;
+        }
+
+        .riwayat .card:hover>h2 {
+            display: none;
+        }
+
+
+        /* --------------------------------------skill--------------------------------- */
+        .skill {
+            padding-top: 50px;
+            padding-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .skill .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: minmax(250px, auto);
+            grid-gap: 10px;
+            color: #50514F;
+        }
+
+        .skill h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px;
+        }
+
+        .skill .card {
+            background-color: #FFB30F;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .skill .card:nth-child(even) {
+            background-color: #464655;
+            color: #FDFFF7;
+        }
+
+        .skill .card a {
+            background-color: rgb(255, 255, 255);
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #515151;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+
+        /* -------------------------------------------footer----------------------------------------------- */
+
+        footer ul {
+            box-sizing: border-box;
+            height: 100px;
+            background: #50514F;
+            color: #FDFFF7;
+            margin: 0;
+            padding: 0 20px;
+            display: flex;
+            font-size: 20px;
+            align-items: center;
+        }
+
+        footer ul li {
+            list-style: none;
+        }
+
+        footer ul li:nth-child(1) {
+            margin-right: auto;
+        }
+
+        @media (min-width:700px) {
+
+            /* ----------------------------------------------header------------------------------- */
+
+            .header nav ul {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                /* align-items: center; */
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .header nav ul li {
+                list-style: none;
+                font-size: 38px;
+            }
+
+            .header .jumbotron h1 {
+                font-size: 60px;
+                opacity: 0.;
+            }
+
+            .header .jumbotron p {
+                font-size: 24px;
+                opacity: 0.9;
+            }
+
+            /* ---------------------------------------------about------------------------------------------- */
+            .about {
+                padding: 50px 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                height: 500px;
+            }
+
+            .about>* {
+                padding: 0 10px;
+            }
+
+            .about img {
+                width: 50%;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            .about .about-article {
+                padding: 5px;
+            }
+
+            .about .about-article h3 {
+                text-align: center;
+                font-size: 40px;
+            }
+
+
+
+            /* ------------------------------------------riwayat---------------------------------------- */
+            .riwayat .container {
+                display: grid;
+                /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 250px;
+                grid-gap: 10px;
+                padding: 40px 40px;
+            }
+
+            .riwayat .container .card {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0 15px;
+                border-radius: 20px 0 20px 0;
+                cursor: pointer;
+                transition: all 300ms;
+            }
+
+
+            /* --------------------------------------skill--------------------------------- */
+            .skill .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: minmax(250px, auto);
+                grid-gap: 10px;
+                padding: 0 40px;
+            }
+
+            .skill .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0 20px;
+            }
+        }
+
+        @media (min-width:1000px) {
+            .header {
+                height: 600px;
+            }
+
+            .riwayat {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            .about {
+                overflow: hidden;
+                padding: 50px 80px;
+            }
+
+            .skill {
+                padding-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu-btn"><a href="#mynav">MENU</a></div>
+    <div class="header" id="home">
+        <nav id="mynav">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#riwayat">RIWAYAT</a></li>
+                <li><a href="#skill">SKILL</a></li>
+            </ul>
+        </nav>
+        <div class="jumbotron">
+            <h1>Milluki Zoeldyik</h1>
+            <p>welcome to my website</p>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <img data-aos="fade-down-right" src="img/3.jpg" alt="profil image">
+        <div class="about-article" data-aos="fade-up-left">
+            <h3>About Me</h3>
+            <h5 class="ttl">Tegal 1 / Jan / 1995</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita rerum, doloremque modi voluptate
+                ea
+                ipsa dolore fugit dolorem tenetur atque quae consequuntur blanditiis quidem consequatur totam.
+                Debitis
+                ad earum reprehenderit reiciendis illo magni eligendi? Excepturi ipsam odit cupiditate, iste
+                delectus
+                hic a deleniti illo dolor? Magnam nemo dolor atque neque.</p>
+        </div>
+    </div>
+    <div class="riwayat" id="riwayat">
+        <h1 data-aos="flip-down" data-aos-duration="800">Riwayat Pendidikan</h1>
+        <div class="container">
+            <div class="card" data-aos="flip-left" data-aos-duration="1200">
+                <h2>SD</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="card" data-aos="flip-up" data-aos-duration="1200">
+                <h2>SMP</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="card" data-aos="flip-right" data-aos-duration="1200">
+                <h2>SMk</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+    <div class="skill" id="skill">
+        <h1 data-aos="fade-down">Skill</h1>
+        <div class="container">
+            <div class="card" data-aos="fade-down-right">
+                <h2>Html dan Css</h2>
+                <p>familiar dengan HTML dan CSS, dan mampu membuat kerangka web sederhana dengan menngunakan kedua
+                    teknologi
+                    tersebut, sebagaimana resume ini dibuat menggunakan teknologi tersebut</p>
+            </div>
+            <div class="card" data-aos="fade-down-left">
+                <h2>Javascript</h2>
+                <p>familiar dengan javascript dan mampu membuat fungsi dan event sederhana dengan javascript, berikut
+                    adalah
+                    beberapa hal yang saya lakukan dengan javascript</p>
+                <a href="" class="btn">Klik disini</a>
+            </div>
+            <div class="card" data-aos="fade-down-left">
+                <h2>Adobe Photoshop</h2>
+                <p>familiar dengan Adobe photoshop, mampu melakukan manipulasi sederhana dengan menggunakan photoshop,
+                    seperti menghapus background pada suatu foto</p>
+            </div>
+            <div class="card" data-aos="fade-up-right">
+                <h2>Bootstrap</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sit numquam delectus alias nihil
+                    dolorum
+                    magnam eius explicabo aliquam? Eveniet, cumque adipisci asperiores reiciendis esse necessitatibus ex
+                    quidem dolor magnam unde quaerat? Ratione nulla eaque ipsa ad quisquam, suscipit repellendus.</p>
+            </div>
+            <div class="card" data-aos="fade-up-right">
+                <h2>Microsoft Office</h2>
+                <p>saya dapat menggunakan beberapa aplikasi dari microsoft office, seperti. word, excel, dan powerpoint
+                </p>
+            </div>
+            <div class="card" data-aos="fade-up-left">
+                <h2>Adobe ilustrator</h2>
+                <p>Familiar dengan adobe ilustrator</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li>tegal 2019</li>
+            <li>create by Zoeldyik</li>
+        </ul>
+    </footer>
+
+    <!-------------------------------------------------- aos ------------------------->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            // disable: 'mobile',
+            // disable: 'phone',
+        });
+    </script>
+</body>
+
+</html>

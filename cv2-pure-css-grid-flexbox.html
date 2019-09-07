@@ -59,9 +59,11 @@
             justify-content: center;
             align-items: center;
             color: white;
-            background: url('https://images.pexels.com/photos/2588757/pexels-photo-2588757.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background: url('https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
             background-size: cover;
             background-repeat: no-repeat;
+            object-fit: cover;
+            object-position: center;
             background-color: aqua;
             overflow: hidden;
         }
@@ -120,7 +122,7 @@
 
         /* ---------------------------------------------about------------------------------------------- */
         .about {
-            overflow-x: hidden;
+            overflow: hidden;
             padding: 50px 5px;
             display: flex;
             flex-direction: column;
@@ -130,6 +132,7 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
+            object-position: center;
         }
 
         .about .about-article {
@@ -319,13 +322,13 @@
             }
 
             .about img {
-                width: 50%;
+                width: 40%;
                 height: 300px;
                 object-fit: cover;
             }
 
             .about .about-article {
-                padding: 5px;
+                padding: 5px 15px;
             }
 
             .about .about-article h3 {
@@ -416,7 +419,9 @@
         </div>
     </div>
     <div class="about" id="about">
-        <img data-aos="fade-down-right" src="https://images.pexels.com/photos/2191123/pexels-photo-2191123.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="profil image">
+        <img data-aos="fade-down-right"
+            src='https://images.pexels.com/photos/2220290/pexels-photo-2220290.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            alt="profil image">
         <div class="about-article" data-aos="fade-up-left">
             <h3>About Me</h3>
             <h5 class="ttl">Tegal 1 / Jan / 1995</h5>

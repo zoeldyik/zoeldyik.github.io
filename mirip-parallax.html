@@ -13,6 +13,8 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
+            overflow-y: scroll;
+            position: relative;
         }
 
         .box {
@@ -23,6 +25,7 @@
             justify-content: center;
             padding: 0 80px;
             position: relative;
+            scroll-behavior: smooth;
         }
 
         body .teks {
@@ -97,6 +100,31 @@
             background-attachment: fixed;
         }
 
+        .toTop {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            margin: 14px;
+            background-color: rgba(199, 21, 134, 0.678);
+            padding: 4px 7px;
+            z-index: 100;
+            cursor: pointer;
+            display: none;
+        }
+
+        .toTop a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .toTop:hover {
+            background-color: mediumvioletred;
+        }
+
+        .block {
+            display: block;
+        }
+
         @media(max-width: 450px) {
             h1 {
                 font-size: 32px;
@@ -110,12 +138,16 @@
             .box {
                 padding: 0 20px;
             }
+
+            .toTop a {
+                font-size: 10px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="box">
+    <div class="box" id="top">
         <h1>hello there</h1>
     </div>
     <div class="box teks">
@@ -163,6 +195,25 @@
     <div class="box">
         <h1>end of the web</h1>
     </div>
+
+    <div class="toTop"><a href="#top">to Top</a></div>
+
+    <script>
+        const btn = document.querySelector('.toTop');
+
+        // beri event scroll pada window
+        window.addEventListener('scroll', show)
+
+        // btn hanya akan muncul saat window.pageYOffset > 4700
+        function show() {
+            if (window.pageYOffset > 4700) {
+                btn.classList.add('block');
+            } else {
+                btn.classList.remove('block');
+            }
+        }
+
+    </script>
 </body>
 
 </html>

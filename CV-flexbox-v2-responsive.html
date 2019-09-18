@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cv flexbox</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            background: rgb(26, 153, 83);
+        }
+
+        .container {
+            width: 90%;
+            height: 85%;
+            border-radius: 20px;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            display: flex;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            font-family: 'Nunito', sans-serif;
+        }
+
+        /* -----------------------------------------------style semua UL dan Li dan a */
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            text-decoration: none;
+        }
+
+        /* ------------------------------------------------------------------------ */
+
+
+        nav {
+            background: mediumseagreen;
+            padding: 20px 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin-top: 2px;
+        }
+
+        nav ul li a {
+            font-size: 14px;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(218, 214, 214);
+        }
+
+        .img {
+            /* background: mediumvioletred; */
+            position: relative;
+            flex: 2;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+        }
+
+        .img ul {
+            position: absolute;
+            z-index: 20;
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            bottom: 0;
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .img ul li a {
+            color: mediumseagreen;
+            font-weight: 600;
+        }
+
+        .img ul li a:hover {
+            color: rgb(50, 150, 95);
+        }
+
+        .content {
+            background: mediumseagreen;
+            flex: 4;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+
+        .content>div {
+            height: 100%;
+            box-sizing: border-box;
+            position: relative;
+            color: white;
+        }
+
+        .content #home h1 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .content #about {
+            background-color: rgb(39, 160, 93);
+            padding: 50px 100px;
+        }
+
+        .content h1 span {
+            font-size: 28px;
+        }
+
+        .content #about h1 {
+            text-align: center;
+        }
+
+        .content #pendidikan {
+            padding: 50px 100px;
+        }
+
+        .content #pendidikan h1 {
+            text-align: center;
+        }
+
+        .toTop {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            box-sizing: border-box;
+            width: 30px;
+            height: 30px;
+            margin: 15px 20px;
+            font-size: 14px;
+            color: rgb(0, 0, 0);
+            background: rgba(255, 255, 255, 0.3);
+            line-height: 30px;
+            text-align: center;
+            border-radius: 15px;
+            display: none;
+        }
+
+        .toTop a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-weight: 1000;
+        }
+
+        .toTop a:hover {
+            color: white;
+        }
+
+        .show {
+            display: block;
+        }
+
+        /* ------------------------------------responsive style */
+        @media (max-width:850px) {
+            body {
+                height: auto;
+                scroll-behavior: smooth;
+            }
+
+            .container {
+                width: 90%;
+                height: 100%;
+                border-radius: 0;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                position: relative;
+            }
+
+            nav {
+                z-index: 100;
+                padding: 10px 10px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            nav ul {
+                display: flex;
+                width: 100%;
+                justify-content: flex-end;
+            }
+
+            nav ul li {
+                margin-left: 6px;
+            }
+
+            .img {
+                position: relative;
+                flex: 1;
+                height: 400px;
+            }
+
+            .content {
+                flex: 4;
+                overflow: visible;
+            }
+
+            .content h1 span {
+                font-size: 23px;
+            }
+
+            .content>div {
+                height: 100vh;
+                box-sizing: border-box;
+                position: relative;
+                color: white;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            .img {
+                height: 270px;
+            }
+
+            .img ul {
+                padding: 10px 0;
+            }
+
+            .content>div {
+                height: 550px;
+                box-sizing: border-box;
+                position: relative;
+                color: white;
+            }
+
+            .content h1 span {
+                font-size: 13px;
+            }
+
+            .content>div:first-child {
+                height: 300px;
+            }
+
+            .content #about {
+                padding: 40px;
+            }
+
+            .content #pendidikan {
+                padding: 40px;
+            }
+
+            .content h1 {
+                font-size: 20px;
+                margin-top: 0;
+            }
+
+            .content p {
+                font-size: 12px;
+            }
+
+            .toTop {
+                margin: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navigasi">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#pendidikan">history</a></li>
+            </ul>
+        </nav>
+        <div class="img">
+            <img src="" alt="">
+
+            <ul class="sosmed">
+                <li><a href="">twitter</a></li>
+                <li><a href="">youtube</a></li>
+                <li><a href="">github</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="home">
+                <h1><span style="font-style: italic;  font-weight:300;">halo nama saya </span> <br>
+                    Milluki Zoeldyik</h1>
+            </div>
+            <div id="about">
+                <h1>About</h1>
+                <h4 class="ttl">Tegal 1 / jan / 1995</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis veniam consectetur debitis
+                    exercitationem ipsa aspernatur delectus magnam ullam veritatis consequuntur placeat assumenda
+                    numquam recusandae, incidunt praesentium officia maxime. Tempore, ullam.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo corrupti voluptates quod
+                    fugit
+                    modi eaque, consequuntur quae in, incidunt, at vero? Sit eius recusandae dolore numquam. Aut
+                    esse ab
+                    beatae.</p>
+            </div>
+            <div id="pendidikan">
+                <h1>Riwayat pendidikan</h1>
+                <div class="box">
+                    <div class="card">
+                        <h4>SD</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt animi eius maiores illo a.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h4>SMP</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt animi eius maiores illo a.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h4>SMK</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt animi eius maiores illo a.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toTop"> <a href="#navigasi"> top </a> </div>
+
+
+    <script>
+        // ------------------------------------------- function untuk button
+        const btn = document.querySelector('.toTop');
+        window.onscroll = function () {
+            if (pageYOffset > 590) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        }
+
+
+
+        // -------------------------------------------function slider sederhanana
+        // ----------------------------------------link tutor
+        // --------------------------------------------------- https://www.youtube.com/watch?v=4YQ4svkETS0
+        const images = [
+            'https://images.pexels.com/photos/1530220/pexels-photo-1530220.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+            'https://images.pexels.com/photos/2587319/pexels-photo-2587319.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+            'https://images.pexels.com/photos/2162891/pexels-photo-2162891.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+            'https://images.pexels.com/photos/2928071/pexels-photo-2928071.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ];
+        const imageTag = document.querySelector('img');
+        // create counternya
+        let i = 0;
+        // tentukan durasi eventnya satuan ms
+        const time = 2000;
+
+        // tentukan kapan even terjadi
+        window.onload = changeImage;
+
+        // ganti gambar jika masih kurang dari panjang array images  yang adalah 3 
+        // [ dan array di mulai dari index 0]
+        function changeImage() {
+            imageTag.src = images[i];
+
+            if (i < images.length - 1) {
+                i++
+            } else {
+                i = 0
+            }
+
+            setTimeout(changeImage, time);
+        }
+
+    </script>
+</body>
+
+</html>

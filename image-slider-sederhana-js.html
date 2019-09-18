@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slider js dengan setTimeout()</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            margin: 5px;
+            text-align: center;
+            font-size: 4.5vw;
+            color: darksalmon;
+        }
+
+        .container {
+            width: 60%;
+            height: 60%;
+            background: aquamarine;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            border: 1px solid white;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        a {
+            color: darksalmon;
+        }
+
+        a:hover {
+            color: mediumvioletred;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>slider js dengan setTimeout()</h1>
+    <div class="container">
+        <img src="" alt="">
+    </div>
+    <a href="https://www.youtube.com/watch?v=4YQ4svkETS0">link tutorial youtube</i></a>
+
+
+    <script>
+        // -------------------------------------------function slider sederhanana
+        const images = [
+            'https://images.pexels.com/photos/1530220/pexels-photo-1530220.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+            'https://images.pexels.com/photos/2587319/pexels-photo-2587319.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+            'https://images.pexels.com/photos/2162891/pexels-photo-2162891.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+            'https://images.pexels.com/photos/2928071/pexels-photo-2928071.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ];
+        const imageTag = document.querySelector('img');
+        // create counternya
+        let i = 0;
+        // tentukan durasi eventnya satuan ms
+        const time = 2000;
+
+        // tentukan kapan even terjadi
+        window.onload = changeImage;
+
+        // ganti gambar jika masih kurang dari panjang array images  yang adalah 3 
+        // [ dan array di mulai dari index 0]
+        function changeImage() {
+            imageTag.src = images[i];
+
+            if (i < images.length - 1) {
+                i++
+            } else {
+                i = 0
+            }
+
+            setTimeout(changeImage, time);
+        }
+
+    </script>
+</body>
+
+</html>

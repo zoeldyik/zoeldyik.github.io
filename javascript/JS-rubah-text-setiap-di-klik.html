@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card {
+            background-color: cadetblue;
+            width: 100%;
+            border-bottom: 1px solid black;
+            text-align: center;
+            padding-bottom: 10px;
+            color: white;
+            text-transform: capitalize;
+        }
+
+        button {
+            padding: 12px;
+            background-color: sienna;
+            font-size: 30px;
+            color: white;
+            border: 0;
+            min-width: 64px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>mengganti text pada button setiap di klik</h3>
+
+        <div class="card">
+            <h4>menambah angka sebanyak tombol di klik</h4>
+            <button type="button" class="btnCounter">click me</button>
+        </div>
+        <div class="card">
+            <h4>menggunakan array</h4>
+            <button type="button" class="btnArray">click me</button>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        // script untuk button counter
+        const btn1 = document.querySelector('.btnCounter');
+        // buat counternya
+        let counter1 = 1;
+        btn1.addEventListener('click', function () {
+            btn1.textContent = ' di klik sebanyak' + ' ' + counter1;
+            counter1++
+        })
+
+
+
+
+
+
+        // script untuk button array
+        // idenya ganti text pada button dengan text yang berasal dari array setiap kali di klik
+        const btn2 = document.querySelector('.btnArray');
+
+        // buat array
+        const message = ['halo', 'selamat datang', 'sampai jumpa'];
+        // buat counternya, yang kita gunakan untuk memanggil array index tertentu
+        let counter2 = 0;
+        // buat fungsi yang akan di masukan ke dlm event
+        function ubahText() {
+            if (counter2 < message.length) {
+                btn2.textContent = message[counter2];
+                counter2++
+            }
+        }
+        // buat event dan masukkan fungsi
+        btn2.addEventListener('click', ubahText);
+    </script>
+</body>
+
+</html>

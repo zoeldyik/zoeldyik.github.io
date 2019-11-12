@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CV flexbox V3</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background: rgb(26, 153, 83);
+            font-family: 'Nunito', sans-serif;
+            font-weight: 400;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow-x: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            padding: 15px 10px;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* nav ul li a:hover {
+            color: rgb(9, 63, 21);
+        } */
+
+
+
+        /* ---------------------------img----------------------- */
+
+        .img {
+            height: 350px;
+            position: relative;
+        }
+
+        .img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .img ul {
+            position: absolute;
+            z-index: 20;
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            bottom: 0;
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 0;
+        }
+
+        .img ul li {
+            list-style: none;
+        }
+
+        .img ul li a {
+            color: mediumseagreen;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .img ul li a:hover {
+            color: rgb(11, 54, 5);
+            font-weight: 600;
+        }
+
+        /* ----------------------------------content-------------------------- */
+        .content {
+            background: mediumseagreen;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: thin;
+            scrollbar-color: rgb(19, 82, 10) #d3d3d3;
+        }
+
+
+        /*------------------------------------ menghilangkan scrollbar di chrome */
+        .content::-webkit-scrollbar {
+            width: 7px;
+            background-color: #d3d3d3;
+        }
+
+
+        .content::-webkit-scrollbar-thumb {
+            background-color: rgb(19, 82, 10);
+        }
+
+
+        /* ----------------------------------- menghilangkan scrollbar di mozilla */
+
+        .content>div {
+            min-height: 300px;
+            box-sizing: border-box;
+            position: relative;
+            color: white;
+            padding: 35px 20px;
+        }
+
+        .content p {
+            font-size: 12px;
+        }
+
+        .content h1 {
+            font-size: 24px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+
+
+
+
+        /* -------------------------------------------content home-------------------- */
+        .content #home {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content #home h1 span {
+            font-size: 16px;
+        }
+
+
+        /* ------------------------------------content about------------------ */
+        .content #about {
+            background-color: rgb(39, 160, 93);
+        }
+
+        .content #about h1 {
+            text-align: center;
+        }
+
+
+        /* -------------------------------------content riwayat------------------- */
+
+        .content #pendidikan h4 {
+            margin-bottom: 5px;
+        }
+
+        .content #pendidikan .box .card h4 {
+            border-bottom: 1px solid white;
+        }
+
+
+        .toTop {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            box-sizing: border-box;
+            width: 30px;
+            height: 30px;
+            margin: 15px 20px;
+            font-size: 14px;
+            color: rgb(0, 0, 0);
+            background: rgba(255, 255, 255, 0.3);
+            line-height: 30px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .toTop a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-weight: 1000;
+        }
+
+        .toTop a:hover {
+            color: white;
+        }
+
+        @media (min-width:800px) {
+            .img {
+                height: 400px;
+            }
+
+            .img img {
+                object-position: bottom;
+            }
+
+            .content>div {
+                min-height: 500px;
+                padding: 60px 40px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
+
+            .content h1 {
+                font-size: 30px;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+
+        }
+
+        @media (min-width: 992px) {
+
+            body {
+                height: 100vh;
+                display: flex;
+            }
+
+            .container {
+                width: 90%;
+                height: 80%;
+                display: flex;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                position: relative;
+            }
+
+            /* -----------------------------navigasi--------------- */
+            nav {
+                padding: 14px 0;
+            }
+
+            nav ul {
+                width: 100%;
+                height: 100%;
+                padding: 0 10px;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+            nav ul li {
+                margin-left: 0px;
+            }
+
+            nav ul li a {
+                padding: 2px;
+            }
+
+            /* --------------------------img------------------- */
+            .img {
+                flex: 2;
+                height: 100%;
+            }
+
+            /* ----------------------------------content-------------------- */
+            .content {
+                flex: 4;
+                overflow-y: scroll;
+            }
+
+            .content>div {
+                height: 100%;
+                padding: 60px 80px;
+            }
+
+            .content h1 {
+                font-size: 35px;
+            }
+
+            .content #home h1 span {
+                font-size: 22px;
+            }
+
+            .toTop {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <nav id="navigasi">
+            <ul>
+                <li><a href="#home" onclick="navActive(0)">home</a></li>
+                <li><a href="#about" onclick="navActive(1)">about</a></li>
+                <li><a href="#pendidikan" onclick="navActive(2)">history</a></li>
+            </ul>
+        </nav>
+        <div class="img">
+            <img src="" alt="">
+
+            <ul class="sosmed">
+                <li><a href="https://twitter.com/login" target="blank">twitter</a></li>
+                <li><a href="https://youtube.com" target="blank">youtube</a></li>
+                <li><a href="https://github.com/zoeldyik" target="blank">github</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="home">
+                <h1><span style="font-style: italic;  font-weight:300;">halo nama saya </span> <br>
+                    Milluki Zoeldyik</h1>
+            </div>
+            <div id="about">
+                <h1>About</h1>
+                <h4 class="ttl">XXXX / jan / XXXX</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis veniam consectetur debitis
+                    exercitationem ipsa aspernatur delectus magnam ullam veritatis consequuntur placeat assumenda
+                    numquam recusandae, incidunt praesentium officia maxime. Tempore, ullam.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo corrupti voluptates quod
+                    fugit
+                    modi eaque, consequuntur quae in, incidunt, at vero? Sit eius recusandae dolore numquam. Aut
+                    esse ab
+                    beatae.</p>
+            </div>
+            <div id="pendidikan">
+                <h1>Riwayat pendidikan</h1>
+                <div class="box">
+                    <div class="card">
+                        <h4>SD</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt animi eius maiores illo a.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h4>SMP</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt animi eius maiores illo a.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h4>SMK</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt animi eius maiores illo a.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toTop"> <a href="#navigasi"> top </a> </div>
+
+
+
+    <script>
+        // -------------------------------------------function slider sederhanana
+        // ----------------------------------------link tutor
+        // --------------------------------------------------- https://www.youtube.com/watch?v=4YQ4svkETS0
+        const images = [
+            'https://images.pexels.com/photos/1530220/pexels-photo-1530220.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+            'https://images.pexels.com/photos/2587319/pexels-photo-2587319.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+            'https://images.pexels.com/photos/2162891/pexels-photo-2162891.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+            'https://images.pexels.com/photos/2928071/pexels-photo-2928071.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ];
+        const imageTag = document.querySelector('img');
+        // create counternya
+        let i = 0;
+        // tentukan durasi eventnya satuan ms
+        const time = 2000;
+
+        // tentukan kapan even terjadi
+        window.onload = changeImage;
+
+        // ganti gambar jika masih kurang dari panjang array images  yang adalah 3 
+        // [ dan array di mulai dari index 0]
+        function changeImage() {
+            imageTag.src = images[i];
+
+            if (i < images.length - 1) {
+                i++
+            } else {
+                i = 0
+            }
+            setTimeout(changeImage, time);
+        }
+
+
+        // ------------------------------------------- function untuk button
+        const btn = document.querySelector('.toTop');
+        window.onscroll = function () {
+            if (pageYOffset > 400) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+
+        // ----------------------------------------- fake scroll spy
+        const navlinks = document.querySelectorAll("nav ul li a");
+        const contentEl = document.querySelectorAll(".content>div");
+
+        // ------------------------------------------- idenya rubah color navlinks sesuai dengan index
+        // ------------------------------------------ element contentEl yang di hover
+
+        for (let i = 0; i < contentEl.length; i++) {
+            const element = contentEl[i];
+            element.addEventListener("mouseover", function () {
+                navlinks.forEach(e => {
+                    e.style.color = "white";
+                });
+                navlinks[i].style.color = "rgb(11, 54, 5)";
+                navlinks[i].style.fontWeight = "bold";
+            })
+        }
+
+
+        // --------------------------------------- rubah color navlink saat di klik
+        // --------------------------------------- kembalikan style element navlink yg tidak di pilih seperti semula
+        function navActive(index) {
+            navlinks.forEach(e => {
+                e.style.color = "white";
+            });
+            navlinks[index].style.color = "rgb(11, 54, 5)";
+        }
+        window.document.onload = navActive(0);
+    </script>
+
+</body>
+
+</html>

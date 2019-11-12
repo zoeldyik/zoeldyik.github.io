@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>random quote</title>
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: gray;
+            font-family: cursive, sans-serif;
+            /* merubah semua huruf di awal kalimat menjadi kapital */
+            text-transform: capitalize;
+        }
+
+        .container {
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container>* {
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .container button {
+            background-color: gray;
+            font-size: 1rem;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            outline: 0;
+            font-weight: 200;
+            align-self: center;
+            order: 1;
+            pointer-events: all;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        blockquote {
+            margin: 2rem;
+            border-left: 8px solid gray;
+            padding: 0.7rem;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        #quoteAuthor {
+            color: gray;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 14px 0;
+                border-radius: 20px;
+                width: 100%;
+                height: 400px;
+            }
+
+            h1,
+            h2 {
+                font-size: 16px;
+            }
+
+            button {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>quote by famous people</h1>
+        <button type="button">click to show a quote</button>
+        <blockquote>
+            <h2 id="quote">quote</h2>
+        </blockquote>
+        <h2 id="quoteAuthor">quote Author</h2>
+    </div>
+
+    <script>
+
+        // create array
+        const quotes = [
+            // create object
+            {
+                name: 'random',
+                quoteText: '"The first draft is just you telling yourself the story"'
+            }
+            ,
+            {
+                name: '"― Lisa See"',
+                quoteText: '“Read a thousand books, and your words will flow like a river.”'
+            }
+            ,
+            {
+                name: '"― Jodi Picoult"',
+                quoteText: '“You can always edit a bad page. You can’t edit a blank page.”'
+            }
+            ,
+            {
+                name: '"— Louis L’Amour"',
+                quoteText: '“Start writing, no matter what. The water does not flow until the faucet is turned on.”'
+            }
+            ,
+            {
+                name: '"— Virginia Woolf"',
+                quoteText: '“Every secret of a writer’s soul, every experience of his life, every quality of his mind, is written large in his works”'
+            }
+            ,
+            {
+                name: '"― Anton Chekhov"',
+                quoteText: '“Don’t tell me the moon is shining; show me the glint of light on broken glass.”'
+            }
+            ,
+            {
+                name: '"—Stephen King"',
+                quoteText: '"The road to hell is paved with adverbs.”'
+            }
+            ,
+            {
+                name: '"—Steve Almond, WD"',
+                quoteText: '“All readers come to fiction as willing accomplices to your lies. Such is the basic goodwill contract made the moment we pick up a work of fiction”'
+            }
+            ,
+            {
+                name: '"—Jack Kerouac, WD',
+                quoteText: '“It ain’t whatcha write, it’s the way atcha write it.”'
+            }
+            ,
+            {
+                name: '"—Robert Benchley',
+                quoteText: '“The freelance writer is a man who is paid per piece or per word or perhaps”'
+            }
+        ]
+
+        const myBackgroundColor = ['deepskyblue', 'mediumseagreen', 'salmon', 'coral', 'mediumturquoise', 'mediumvioletred', 'mediumblue', 'mediumspringgreen', '#253D5B', '#B79D94', '#8A89C0', '#048A81', '#2E4057', '#554640', '#3B28CC']
+
+
+
+
+
+
+        const body = document.querySelector('body');
+        const h1 = document.querySelector('h1');
+        const blockquote = document.querySelector('blockquote');
+        const button = document.querySelector('button');
+        const quote = document.getElementById('quote');
+        const quoteAuthor = document.getElementById('quoteAuthor');
+
+
+        // saat halaman di load jalankan function di bawah
+        window.onload = randomQuoteAndBackground();
+
+
+        // berikan event pada button
+        button.addEventListener('click', randomQuoteAndBackground);
+
+
+
+
+        // create function untuk acak quote dan background
+        function randomQuoteAndBackground() {
+            // dapatkan angka acak yang tidak lebih dari panjang array quotes
+            let random = Math.floor(Math.random() * quotes.length);
+
+            // kita jadikan "random" sebagai index array dan
+            // tampilkan isi object di dalam index array tersebut 
+            // dengan "array[random].keyObject"
+            quote.textContent = quotes[random].quoteText;
+            quoteAuthor.textContent = quotes[random].name;
+
+            // ----------------rubah warna pada beberapa element element
+            // dapatkan angka acak yang nilainya tidak lebih dari panjang array
+            let randomColor = Math.floor(Math.random() * myBackgroundColor.length);
+
+
+            blockquote.style.borderLeftColor = myBackgroundColor[randomColor];
+            body.style.backgroundColor = myBackgroundColor[randomColor];
+            quote.style.color = myBackgroundColor[randomColor];
+            quoteAuthor.style.color = myBackgroundColor[randomColor];
+            h1.style.color = myBackgroundColor[randomColor];
+            button.style.backgroundColor = myBackgroundColor[randomColor];
+
+        }
+
+    </script>
+</body>
+
+</html>

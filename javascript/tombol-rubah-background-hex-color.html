@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hex color</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        button {
+            padding: 5px;
+            background-color: deepskyblue;
+            border: 2px solid white;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+            font-size: 25px;
+            text-align: center;
+            color: azure;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-top: 3px;
+        }
+
+        .hex {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            create random hex color dengan memanfaatkan array <br>
+            kode warna hex nya adalah : <span class="hex"></span>
+        </h2>
+        <button>click me!</button>
+    </div>
+
+    <script>
+        // buat array untuk menampung nilai hexnumber
+        const hexNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+        const button = document.querySelector('button');
+        const hex = document.querySelector('.hex');
+        const body = document.querySelector('body');
+
+        button.addEventListener('click', function () {
+            let hexColor = '#';
+            // kita looping 'hexNumber' sebanyak 6x secara acak dengan methode
+            // 'Math.floor(Math.random())' karena hexcolor berupa
+            // berupa 6 digit angka + huruf
+            for (let i = 0; i < 6; i++) {
+                let random = Math.floor(Math.random() * hexNumber.length);
+                hexColor = hexColor + hexNumber[random];
+
+                // kita tampilkan nilai hexcolor dari hasil looping ke layar
+                hex.innerHTML = '<br>' + hexColor;
+                // rubah background color body
+                body.style.backgroundColor = hexColor;
+            }
+        })
+
+    </script>
+</body>
+
+</html>

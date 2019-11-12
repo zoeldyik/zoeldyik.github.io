@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>latihan JS</title>
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /*membuat child element dari body mewnjadi kolom*/
+            justify-content: center;
+            /*membuat child element dari body berada tepat di tengah halaman*/
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>rubah warna backkground halaman dengan ARRAY</h1> <br>
+    <button>tombol rubah background halaman</button>
+
+    <script>
+        const h1 = document.querySelector('h1');
+        const button = document.querySelector('button');
+        const body = document.querySelector('body');
+
+        // buat array yang akan berisi warna untuk background
+
+        const colors = ['coral', 'deepskyblue', 'green', 'magenta', '#3b5998', 'yellow'];
+
+        // fungsi ganti warna
+
+        button.addEventListener('click', function () {
+            // agar memilih angka random sebanyak panjang array
+            let random = Math.floor(Math.random() * colors.length);
+
+            // backgroundcolor di beri nilai dari array colors dengan index random
+            body.style.backgroundColor = colors[random];
+
+        })
+    </script>
+</body>
+
+</html>

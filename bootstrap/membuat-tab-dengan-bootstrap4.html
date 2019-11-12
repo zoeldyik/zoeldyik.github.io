@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>membuat tab dengan bootstrap</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .card {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mytab my-5">
+        <div class="card">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a data-toggle="tab" href="#home" class="nav-link active  ">home</a>
+                </li>
+                <li class="nav-item">
+                    <a data-toggle="tab" href="#about" class="nav-link ">about</a>
+                </li>
+                <li class="nav-item">
+                    <a data-toggle="tab" href="#album" class="nav-link">album</a>
+                </li>
+            </ul>
+
+            <div class="tab-content ">
+                <div class="tab-pane active py-3 px-3" id="home">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, necessitatibus.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores quas velit autem
+                                ipsam quisquam impedit doloribus corrupti perferendis perspiciatis, architecto ducimus,
+                                in laudantium cum qui voluptatum facere. Eaque, maiores facere!
+                            </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="https://banner2.kisspng.com/20180705/rrt/kisspng-gon-freecss-fan-art-deviantart-hunter-hunter-gon-freecss-5b3dcac3052ef9.9125181515307762590212.jpg"
+                                class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane py-3 px-3" id="about">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="https://i.pinimg.com/originals/27/64/c8/2764c8f50dc6a1e480b07f9d72164618.png"
+                                class="img-fluid" alt="" style="width: 80%">
+                        </div>
+                        <div class="col-sm-8">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, necessitatibus.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores quas velit autem
+                                ipsam quisquam impedit doloribus corrupti perferendis perspiciatis, architecto ducimus,
+                                in laudantium cum qui voluptatum facere. Eaque, maiores facere! Lorem ipsum dolor sit
+                                amet, consectetur adipisicing elit. Possimus unde sapiente sed quis laudantium a, esse
+                                alias dignissimos soluta deleniti dolores excepturi error facere quas facilis doloremque
+                                aperiam porro minus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="album">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ul>
+
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/365001ec-277d-4afe-b80b-93044a238789/d78977m-9cc78ba5-d355-41f4-a3db-c6cbc1a10c35.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM2NTAwMWVjLTI3N2QtNGFmZS1iODBiLTkzMDQ0YTIzODc4OVwvZDc4OTc3bS05Y2M3OGJhNS1kMzU1LTQxZjQtYTNkYi1jNmNiYzFhMTBjMzUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.G8KpN1kqXWoZJoMbYJmAkCxn4zdUUQcnofc0aHAkSnI"
+                                    alt="Los Angeles" width="100%" height="400px">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/646daf08-f77b-4a9b-abad-63386290714c/d9ivqof-29f918ae-496d-4832-a182-797fb605b5a3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY0NmRhZjA4LWY3N2ItNGE5Yi1hYmFkLTYzMzg2MjkwNzE0Y1wvZDlpdnFvZi0yOWY5MThhZS00OTZkLTQ4MzItYTE4Mi03OTdmYjYwNWI1YTMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.--33Snk_dceUw0hBVwbubTHB_LMwl-LHY3WNLKFwDIc"
+                                    alt="Chicago" width="100%" height="400px">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/182867c2-fb65-44fa-a77a-233ea5453def/dbt15ry-5f8bcb11-79b8-4bf0-a0dd-5f54428463d3.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE4Mjg2N2MyLWZiNjUtNDRmYS1hNzdhLTIzM2VhNTQ1M2RlZlwvZGJ0MTVyeS01ZjhiY2IxMS03OWI4LTRiZjAtYTBkZC01ZjU0NDI4NDYzZDMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.NRryK6K-kActAiLIqDnUuWFE_Zh9wQbeGbBhkFDSOYg"
+                                    alt="New York" width="100%" height="400px">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 offset-sm-3">
+                <p> link membuat tab dari w3school</p>
+                <a class="btn btn-success" href="https://www.w3schools.com/bootstrap4/bootstrap_ref_js_tab.asp">tab</a>
+            </div>
+            <div class="col-sm-3">
+                <p>link membuat carousel</p>
+                <a href="https://www.w3schools.com/bootstrap4/bootstrap_ref_js_carousel.asp"
+                    class="btn btn-primary">carousel</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

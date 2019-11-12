@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Em dan Rem</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Fascinate&display=swap" rel="stylesheet">
+    <style>
+        h2 {
+            font-family: 'Fascinate', cursive;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container my-3 my-md-5">
+        <h2 class="text-center text-uppercase text-success mb-3 mb-md-5">pengertian EM, REM, VW dan VH</h2>
+        <p class="text-center mb-3 mb-md-5">Em dan Rem adalah relative unit, artinya ukurannya bergantung pada sesuatu,
+            <br>
+            <i>"nilai default text pada halaman html adalah 16px apabila tidak kita atur"</i>
+        </p>
+        <div class="card-deck mt-3 mt-md-5 ">
+            <div class="card border border-success">
+                <div class="card-body">
+                    <h4 class="card-title text-success">EM (presentase dari ukuran parent)</h4>
+                    <p class="card-text">misalnya sebuah div di berikan property <b>font-size: 10px</b> maka
+                        <i>"1em"</i> di dalam div tersebut adalah <i>10px</i>
+                        dan apabila div tersebut memiliki child maka child tersebut mewarisi nilai <b>"em seperti
+                            parentnya"</b> jadi <i>"2em = 20px"</i>
+                    </p>
+                    <a class="btn btn-outline-success"
+                        href="https://www.kodingspace.com/css/satuan-em-dan-rem-di-css/">sumber</a>
+                </div>
+            </div>
+            <div class="card border border-success">
+                <div class="card-body">
+                    <h4 class="card-title text-success">REM (presentase dari ukuran root element)</h4>
+                    <p class="card-text">misalnya kita memberikan property <b>font-size: 12px</b> pada tag html maka
+                        nilai <i>"1rem pada halaman tersebut adalah 12px"</i>
+                    </p>
+                    <a class="btn btn-outline-success"
+                        href="https://www.kodingspace.com/css/satuan-em-dan-rem-di-css/">sumber</a>
+                </div>
+            </div>
+            <div class="card border border-success">
+                <div class="card-body">
+                    <h4 class="card-title text-success">VW dan VH</h4>
+                    <p class="card-text">Viewport width dan height, Gampangnya lebar viewport dipotong-potong jadi 100
+                        bagian, maka itu adalah 1vw. Misal lebar viewport kita 1000px maka 1vw = 10px. untuk vh pada
+                        dasarnya sama saja, cuma vh bergantung pada viewport height atau tinggi viewport.
+                    </p>
+                    <p class="font-weight-light"><i>ini adalah satuan yang benar2 responsive, karena merubah ukuran
+                            berdasarkan viewport /
+                            perangkat yang di gunakan untuk membuka halaman web"</i></p>
+                    <a class="btn btn-outline-success" target="_blank"
+                        href="https://www.youtube.com/watch?v=aP8OXWT5qSY">contoh
+                        penggunaannya</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mirip parallax</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            overflow-y: scroll;
+            position: relative;
+        }
+
+        .box {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 80px;
+            position: relative;
+            scroll-behavior: smooth;
+        }
+
+        body .teks {
+            background-color: #504658;
+            color: #e5e5e5;
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5.6vw;
+            color: rgba(229, 229, 229, 0.8);
+            text-transform: capitalize;
+            font-family: 'Indie Flower', cursive;
+        }
+
+        .box:first-child {
+            background: url('https://images.pexels.com/photos/934718/pexels-photo-934718.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            /* gambar akan tetap berada di tempatnya */
+            /* dan akan tertutup oleh gambar berikutnya sesuai dengan urutan penulisan html nya */
+            /* ini gambar pertama */
+            background-attachment: fixed;
+        }
+
+        .box:nth-child(3) {
+            background: url('https://images.pexels.com/photos/1252869/pexels-photo-1252869.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* ini gambar kedua */
+            /* akan menutupi gambar pertama */
+            background-attachment: fixed;
+        }
+
+        .box:nth-child(5) {
+            background: url('https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* ini gambar ketiga */
+            /* akan menutupi gambar ke dua */
+            background-attachment: fixed;
+        }
+
+        .box:nth-child(6) {
+            background: url('https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* ini gambar ketiga */
+            /* akan menutupi gambar ke dua */
+            background-attachment: fixed;
+        }
+
+        .box:nth-child(7) {
+            background: url('https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* ini gambar ketiga */
+            /* akan menutupi gambar ke dua */
+            background-attachment: fixed;
+        }
+
+        .box:nth-child(8) {
+            background: url('https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* ini gambar ketiga */
+            /* akan menutupi gambar ke dua */
+            background-attachment: fixed;
+        }
+
+        .toTop {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            margin: 14px;
+            background-color: rgba(199, 21, 134, 0.678);
+            padding: 4px 7px;
+            z-index: 100;
+            cursor: pointer;
+            display: none;
+        }
+
+        .toTop a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .toTop:hover {
+            background-color: mediumvioletred;
+        }
+
+        .block {
+            display: block;
+        }
+
+        @media(max-width: 450px) {
+            h1 {
+                font-size: 32px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            .box {
+                padding: 0 20px;
+            }
+
+            .toTop a {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="top">
+        <h1>hello there</h1>
+    </div>
+    <div class="box teks">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, ducimus voluptatibus id accusamus vel
+            nihil molestiae in iusto veniam iure eaque voluptate perspiciatis, suscipit maiores dignissimos
+            necessitatibus, quasi quaerat consequatur.
+            Maiores doloribus a possimus odit. Adipisci fugit similique sed a, necessitatibus nam? Suscipit accusantium
+            neque debitis ut incidunt, ducimus iure iusto eligendi cumque dolores quidem illum sint, dolor expedita
+            enim.
+            Tenetur culpa, ipsa corrupti fugit consequuntur autem, necessitatibus iste error illum amet fugiat, aliquid
+            officiis velit sit omnis. Unde quos libero doloremque nam suscipit voluptatibus? Inventore exercitationem
+            quos quasi nostrum?
+            Ex nisi expedita magni debitis minima adipisci nostrum. Ipsum molestiae nobis, quos commodi, aperiam
+            quisquam labore quidem, animi nisi eum non. Nulla, debitis et. Animi libero deserunt quibusdam sit eum.</p>
+    </div>
+    <div class="box">
+        <h1>pretty cool, right?</h1>
+    </div>
+    <div class="box teks">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempore excepturi, labore sed a
+            aspernatur fuga obcaecati nulla deserunt culpa saepe! Corporis maxime qui aut itaque molestias quas? Ut,
+            sint.
+            Molestiae quibusdam optio asperiores harum totam perferendis architecto veniam at quidem et, dolore amet?
+            Eius rerum commodi, temporibus veritatis amet, cum nemo neque laudantium vel molestiae mollitia corporis
+            possimus error.
+            Reprehenderit, earum veritatis vitae necessitatibus quos similique voluptatum quisquam ea quidem molestiae
+            incidunt saepe autem illum, ullam placeat explicabo ipsam praesentium! Reprehenderit consequatur provident
+            beatae voluptas optio! Adipisci, veniam inventore!
+            Obcaecati libero optio eveniet velit, ab delectus magni quia pariatur assumenda quidem vel rerum nemo
+            dolores? Veritatis laborum facere beatae dolor maiores odio quo iusto exercitationem quia cum! Reiciendis,
+            molestias.
+            Omnis cumque quibusdam sequi itaque pariatur saepe, consequuntur consequatur doloribus consectetur
+            laudantium libero quas non ab deserunt dolore obcaecati deleniti, illum quae odit praesentium facilis
+            officiis iure officia a. Accusamus?</p>
+    </div>
+    <div class="box">
+        <h1>More Image Coming...</h1>
+    </div>
+    <div class="box">
+        <h1>More Image Coming...</h1>
+    </div>
+    <div class="box">
+        <h1>More Image Coming...</h1>
+    </div>
+    <div class="box">
+        <h1>end of the web</h1>
+    </div>
+
+    <div class="toTop"><a href="#top">to Top</a></div>
+
+    <script>
+        const btn = document.querySelector('.toTop');
+
+        // beri event scroll pada window
+        window.addEventListener('scroll', show)
+
+        // btn hanya akan muncul saat window.pageYOffset > 4700
+        function show() {
+            if (window.pageYOffset > 4700) {
+                btn.classList.add('block');
+            } else {
+                btn.classList.remove('block');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

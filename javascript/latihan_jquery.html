@@ -11,13 +11,16 @@
             margin: 0;
             padding: 0;
         }
-        body{
+
+        body {
             box-sizing: border-box;
         }
-        hr{
+
+        hr {
             display: block;
             margin: 20px 0;
         }
+
         .accordion h1 {
             text-align: center;
             margin: 50px;
@@ -48,60 +51,66 @@
         }
 
         /* style untuk bagian hide and show */
-        .hide-and-show > *{
+        .hide-and-show>* {
             margin: 20px;
         }
-        .hide-and-show h3{
+
+        .hide-and-show h3 {
             text-align: center;
         }
-        .hide-and-show .card{
+
+        .hide-and-show .card {
             width: 50%;
             margin: auto;
         }
 
-        input{
+        input {
             display: block;
             margin: auto;
             margin-bottom: 10px;
             padding: 5px;
         }
 
-        .hide-and-show p{
+        .hide-and-show p {
             display: none;
         }
 
         /* <!--style menampilkan dan menyembunyikan konten --> */
-        .container{
+        .container {
             padding: 20px;
             background-color: indianred;
             color: white;
             margin: 40px 100px;
             cursor: pointer;
         }
-        .container h3{
+
+        .container h3 {
             margin: 5px;
         }
-        .show-inside{
-            display:block;
+
+        .show-inside {
+            display: block;
             margin: 20px auto;
             padding: 5px;
         }
+
         /* class untuk javascript */
-        .background{
-            background-color:white;
-            color:indianred;
+        .background {
+            background-color: white;
+            color: indianred;
         }
 
-        .hide{
+        .hide {
             display: none;
         }
 
         /* hide content dengan jquery DOM traversal */
-        .container-kartu{
+        .container-kartu {
             margin: auto;
             padding: 10px;
         }
-        .kartu{
+
+        .kartu {
             float: left;
             width: 40%;
             background-color: forestgreen;
@@ -111,13 +120,15 @@
             margin-top: 10px;
             padding: 20px;
         }
+
         .kartu:first-child,
-        .kartu:nth-child(3n){
+        .kartu:nth-child(3n) {
             margin-left: 9%;
             margin-right: 2%;
             background-color: lightcoral;
         }
-        .kartu .close{
+
+        .kartu .close {
             display: block;
             padding: 5px;
             position: absolute;
@@ -125,17 +136,18 @@
             top: 50%;
             z-index: 99;
             color: white;
-            background-color:black;
+            background-color: black;
             font-family: Arial, Helvetica, sans-serif;
-            cursor: pointer;           
+            cursor: pointer;
         }
-        .clear{
+
+        .clear {
             clear: both;
         }
-  
+
 
         /* kembali ke index */
-        button{
+        button {
             margin: 40px;
             padding: 5px;
         }
@@ -151,7 +163,8 @@
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur culpa iure accusantium,
                 natus
-                vel earum id, quas ab quia laudantium quibusdam delectus officia odio, quae quos maxime commodi totam.</p>
+                vel earum id, quas ab quia laudantium quibusdam delectus officia odio, quae quos maxime commodi totam.
+            </p>
         </div>
 
         <div class="card">
@@ -160,7 +173,8 @@
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur culpa iure accusantium,
                 natus
-                vel earum id, quas ab quia laudantium quibusdam delectus officia odio, quae quos maxime commodi totam.</p>
+                vel earum id, quas ab quia laudantium quibusdam delectus officia odio, quae quos maxime commodi totam.
+            </p>
         </div>
     </div>
     <hr>
@@ -228,12 +242,10 @@
     <br><br><br><br><br>
 
 
-    <button><a href="index.html">kembali</a></button>
+    <button><a href="../index.html">kembali</a></button>
 
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
 

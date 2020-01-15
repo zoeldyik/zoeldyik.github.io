@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>latihan sweetalert</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container col-md-10 offset-md-1 text-center">
+
+        <h3 class="text-capitalize text-primary text-center my-5">contoh beberapa sweet alert dan penggunaannya</h3>
+
+        <a id="btnBlue" class="btn btn-primary my-3" href="#" role="button"
+            onclick="Swal.fire('ini adalah simple alert');">klik saya</a>
+
+
+        <a name="" id="" class="btn btn-danger btn-icon my-3" href="#" role="button" data-icon='error'>error mesage</a>
+        <a name="" id="" class="btn btn-success btn-icon my-3" href="#" role="button" data-icon='success'>success
+            mesage</a>
+        <a name="" id="" class="btn btn-warning btn-icon my-3" href="#" role="button" data-icon='warning'>warning
+            mesage</a>
+        <a name="" id="" class="btn btn-info btn-icon my-3" href="#" role="button" data-icon='info'>info mesage</a>
+        <a name="" id="" class="btn btn-secondary btn-icon my-3" href="#" role="button" data-icon='question'>question
+            mesage</a>
+
+
+        <br><br>
+
+
+        <a id="btnDanger" class="btn btn-danger link" href="https://www.youtube.com/" role="button">ke laman youtube</a>
+        <a id="btnDanger" class="btn btn-dark link" href="https://zoeldyik.github.io/" role="button">ke laman
+            github</a>
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- sweet alert -->
+    <!-- cukup include kan file ini dan css sudah otomatis terinclude -->
+    <script src="sweetalert/package/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+
+        // button dengan class btn-icon
+        $('.btn-icon').on('click', function (e) {
+            // tampung nilai dari data-icon ke dalam variabel
+            let icon = $(this).data("icon");
+            Swal.fire({
+                icon: icon,
+                title: 'ini adalah icon ' + icon,
+                text: 'lorem ipsum dolor'
+            })
+        })
+
+
+
+
+
+        // button dengan class link
+        $('.link').on('click', function (e) {
+            // cegah agar link pada button tidak aktif
+            e.preventDefault();
+
+            // simpan nilai href pada button yang sedang di jalankan
+            let href = $(this).attr('href');
+
+
+            Swal.fire({
+                text: 'Kamu yakin untuk mengunjungi web tersebut?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yakin'
+            }).then((result) => {
+                // jika tombol yakin di tekan arahkan ke link pada tombol yang di tekan
+                if (result.value) {
+                    document.location.href = href;
+                }
+            })
+        })  
+    </script>
+</body>
+
+</html>

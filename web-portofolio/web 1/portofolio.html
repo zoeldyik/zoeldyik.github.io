@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="portofolio.css">
+</head>
+
+<body class="position-relative" data-spy="scroll" data-target=".navbar" offset="30px">
+
+    <nav class=" navbar fixed-top navbar-expand-lg navbar-dark" id="mynavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#jumbo">HELLO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active" href="#portofolio">Portofolio</a>
+                    <a class="nav-item nav-link" href="#about">About</a>
+                    <a class="nav-item nav-link" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron" id="jumbo">
+        <img src="img/person.svg" alt="">
+        <h1 class="mt-4">Lorem Ipsum</h1>
+        <hr class="my-2">
+        <p class="mb-md-5">Graphic Artist - Web Designer - Gamer</p>
+        <div class=" social mt-2">
+            <a class="btn" href="#" role="button">
+                <i class="fab fa-fw fa-facebook-f"></i>
+            </a>
+            <a class="btn" href="#" role="button">
+                <i class="fab fa-fw fa-twitter"></i>
+            </a>
+            <a class="btn" href="#" role="button">
+                <i class="fab fa-fw fa-github"></i>
+            </a>
+            <a class="btn" href="#" role="button">
+                <i class="fab fa-fw fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!-----------------------------------portofolio segment  -->
+    <div class="portofolio my-5" id="portofolio">
+        <div class="container">
+            <h2 class="text-center">Portofolio</h2>
+            <hr class="mt-2 mb-5">
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card mt-3 mt-md-0">
+                        <button class="cover" data-toggle="modal" data-target="#houseModal">
+                            <i class="fas fa-plus fa-3x"></i>
+                            more info
+                        </button>
+                        <img class="img-fluid" src="img/portofolio/house.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mt-3 mt-md-0">
+                        <button class="cover" data-toggle="modal" data-target="#schoolModal">
+                            <i class="fas fa-plus fa-3x"></i>
+                            more info
+                        </button>
+                        <img class="img-fluid" src="img/portofolio/school.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mt-3 mt-md-0">
+                        <button class="cover" data-toggle="modal" data-target="#hobbyModal">
+                            <i class="fas fa-plus fa-3x"></i>
+                            more info
+                        </button>
+                        <img class="img-fluid" src="img/portofolio/hobby.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mt-3 mt-md-0">
+                        <button class="cover" data-toggle="modal" data-target="#keyboardModal">
+                            <i class="fas fa-plus fa-3x"></i>
+                            more info
+                        </button>
+                        <img class="img-fluid" src="img/portofolio/keyboard.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------ modal for portofolio segment -->
+    <!-- HOUSE MODAL -->
+    <div class="modal fade" id="houseModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close font-weigth-bolder" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body px-3 px-md-5">
+                    <h4 class="mb-5 text-center">Address & Date of Birth</h4>
+
+                    <h5 class="mb-2">Address</h5>
+                    <p class="mb-3">
+                        Jl MH Thamrin Kav 28-30 Plaza Indonesia Lt 3 29,Menteng Jakarta Indonesia
+                        <br>
+                        Phone Number : 021 3107533/021 31927073
+                    </p>
+
+                    <h5 class="mb-2">Date of Birth</h5>
+                    <p>
+                        Birth in Jakarta 1st Jan 1995, first child of two siblings.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCHOOL MODAL -->
+    <div class="modal fade" id="schoolModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close font-weigth-bolder" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body px-3 px-md-5">
+                    <h4 class="mb-5 text-center">Education Background</h4>
+
+                    <h5 class="mb-2">Elementary School</h5>
+                    <p class="mb-3">
+                        SDN Merderka 45 <br>
+                        Jl.Bumi Pertiwi 110, Menteng Jakarta <br>
+                        2000 - 2005
+                    </p>
+
+                    <h5 class="mb-2">Junior HighSchool</h5>
+                    <p class="mb-3">
+                        SMP Merderka 46 <br>
+                        Jl.Bumi Pertiwi 111, Menteng Jakarta <br>
+                        2005 - 2008
+                    </p>
+
+                    <h5 class="mb-2">HighSchool</h5>
+                    <p class="mb-3">
+                        SMK Pertiwi <br>
+                        Jl. Ibu Kartini 09, Menteng Jakarta <br>
+                        2008 - 2011
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- HOBBY MODAL -->
+    <div class="modal fade" id="hobbyModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close font-weigth-bolder" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body px-3 px-md-5">
+                    <h4 class="mb-5 text-center">My Hobbys</h4>
+
+                    <h5 class="mb-2">Coding</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas iusto totam nihil, assumenda
+                        eaque nam nostrum suscipit quo error eveniet tenetur culpa, blanditiis sint.</p>
+
+                    <h5 class="mb-2">Football & Badminton</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nostrum nihil enim distinctio
+                        possimus numquam illo! Provident, iste.</p>
+
+                    <h5 class="mb-2">Watching Movies</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam aut incidunt a saepe expedita
+                        obcaecati dignissimos possimus architecto, accusantium accusamus animi, quas inventore fugiat
+                        dicta tenetur?</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- KEYBOARD MODAL -->
+    <div class="modal fade" id="keyboardModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close font-weigth-bolder" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body px-3 px-md-5">
+                    <h4 class="mb-5 text-center">My Project</h4>
+
+                    <h5 class="mb-2">Github</h5>
+                    <p>My github page about HTML CSS and JS <span class="badge"><a target="blank"
+                                href="https://zoeldyik.github.io/">here</a></span>
+                    </p>
+                    <p>My github repo PHP <span class="badge"><a target="blank"
+                                href="https://github.com/zoeldyik/dokumentasi-belajar-php">here</a></span> </p>
+
+                    <h5 class="mb-2 mt-4">My website</h5>
+                    <p>My github page <span class="badge"><a target="blank"
+                                href="https://zoeldyik.000webhostapp.com">here</a></span>
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-------------------------about segment  -->
+    <div class="about" id="about">
+        <div class="container">
+            <h2 class="text-center">About</h2>
+            <hr class="mt-2 mb-5">
+            <div class="row">
+                <div class="col-md-4 offset-md-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi minus labore incidunt id officia
+                    deserunt
+                    quasi ullam, nostrum, dolore rerum consectetur sit adipisci, ea reiciendis ipsum quaerat esse
+                    assumenda
+                    aliquam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque optio sequi, iure quaerat
+                    itaque amet repudiandae reiciendis ut ipsum quis?
+                </div>
+                <div class="col-md-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptate quod earum assumenda?
+                    Aperiam amet necessitatibus natus quas aut eum molestias vitae distinctio, mollitia, excepturi quos
+                    reprehenderit odit minima repudiandae et. Nemo obcaecati nobis fugit impedit quos vitae?
+                    Exercitationem,
+                    repellat.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--------------------------contact segment -->
+
+    <div class="contact" id="contact">
+        <h2 class="text-center">Contact Me</h2>
+        <hr class="mt-2 mb-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class=" form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" class="form-control" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" name="message" id="message" cols="30" rows="7"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn" name="send">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-----------------------------footer segment  -->
+
+    <footer>
+        <p class="font-weigth-bolder my-0"> &lt;/&gt; Code with <i class="fas fa-heart"></i> in 2020 </p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-------particles js  -->
+    <script src="particles.js"></script>
+
+    <script src="myjs.js"></script>
+</body>
+
+</html>

@@ -1,8 +1,21 @@
+html{
+    /* smooth scroll */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
 #mynavbar{
     background-color: #00B59F;
     color: #FFFFF3;
-    /* border-bottom: 1px solid #FFFFF3 ; */
 }
+
+
 
 .jumbotron{
     padding-top: 130px;
@@ -143,7 +156,7 @@ hr{
 
 /*--------------------------------about segment  */
 #about{
-    padding: 70px 0;
+    padding: 100px 0;
     background-color: #00B59F;
     color: #FFFFF3;
     position: relative;

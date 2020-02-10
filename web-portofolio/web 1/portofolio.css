@@ -29,7 +29,7 @@ html{
 
 
 
-/*-------------------------style for particles */
+/*-------------------------style for element particles js */
 canvas{
    position: absolute;
    top: 0;
@@ -176,6 +176,7 @@ hr{
 
 #contact .form-control:focus{
     border-color: #00B59F ;
+    box-shadow: 0 0 3 2 #00B59F;
 }
 
 #contact button{

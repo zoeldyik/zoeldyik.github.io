@@ -1,0 +1,282 @@
+#mynavbar{
+    background-color: #E76F51;
+    position: relative;
+    z-index: 200;
+}
+
+#mynavbar .nav-link:hover{
+    cursor: pointer;
+}
+
+
+
+#home #jumbo{
+    background-image: url("img/header.jpg");
+    background-size: cover;
+    object-position: bottom;
+    height: 500px;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+    margin-bottom: 80px;
+}
+ #home #jumbo p{
+    text-shadow: 2px 2px rgba(0,0,0, 0.3);
+    font-style: italic;
+}
+
+#home #jumbo .social a{
+    color: #E76F51 ;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+#home #jumbo .social a:hover{
+    color: #b8533a ;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/*-------------------------------- page HOME bagian facilities  */
+
+#home .fasilitas h2{
+    color: #E76F51;
+    font-weight: 700;
+}
+
+section{
+    margin-bottom: 40px;
+}
+
+section .container .row .image-wrap{
+    display: flex;
+    justify-content: center;
+}
+
+
+section h3{
+    margin-bottom: 20px;
+    color: #2A9D8F;
+}
+section img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+footer{
+    background-color: #E76F51;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------about page */
+#about #jumbo{
+    background-image: url("img/header2.jpg");
+    background-size: cover;
+    height: 270px;
+}
+
+
+#about .card{
+    margin-top: -170px;
+
+}
+
+#about .card .contact p{
+    font-size: 14px;
+    line-height: 25px;
+}
+
+#about .card .contact p i{
+    color: black ;
+}
+
+#about .card h3,
+#about .card h5{
+    color: #E76F51;
+}
+
+
+
+/*------------------------------------booklist page  */
+
+#book-list #jumbo{
+    background-image: url("img/book-list-header.jpg");
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+#book-list #jumbo h1{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #E76F51;
+    border-bottom: 1px solid #E76F51;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+
+#book-list .container{
+    margin-top: -70px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    position: relative;
+    overflow-x: auto;
+}
+
+
+
+/* style for datatables in page book-list */
+
+
+.table thead tr{
+    color: #2A9D8F;
+    font-size: 20px;
+} 
+
+.table span.dtr-title{
+    color: #2a9d8f;
+}
+
+#book-list .page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #2A9D8F;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+div.dataTables_filter label{
+    color: #2A9D8F;
+}
+div.dataTables_filter label input:focus{
+    border-color: #2a9d8f;
+    box-shadow: 0 0 1px rgba(42, 157, 143,0.3);
+}
+
+#book-list .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #2A9D8F;
+    border-color: #2A9D8F;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin-top: 30px;
+    justify-content: center;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, 
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+    background-color: #2A9D8F;
+}
+
+
+
+
+
+
+@media(min-width:768px){
+    #mynavbar{
+        background-color: rgba(0,0,0,0);
+    }
+    
+    #mynavbar .nav-link,
+    #mynavbar .navbar-brand
+    {
+        font-weight: 500;
+        color: #E76F51;
+        text-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
+    }
+    
+    #mynavbar .navbar-brand{
+        font-size: 28px;
+    }
+
+    #mynavbar .nav-link:hover{
+        color: rgb(233, 88, 52);
+    }
+
+    #home #jumbo{
+        height: 490px;      
+        margin-top: -70px;
+    }
+    .fasilitas h2{
+        font-size: 40px;
+        margin-bottom: 100px !important;
+    }
+
+    section .container .teks{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section img{
+        width: 400px;
+        height: 400px;
+    }
+
+
+
+
+
+
+
+    /*------------------------------------------- about page */
+    #about #jumbo{    
+        margin-top: -70px;
+        height: 400px;
+    }
+
+
+
+
+
+    /*------------------------------------booklist page  */
+
+    #book-list #jumbo{
+        margin-top: -70px;
+    }
+
+    #book-list .wrap{
+        margin: 0 130px;
+    }
+
+    #book-list .container{
+        margin-top: -110px;
+        border-radius: 10px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+
+}

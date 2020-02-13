@@ -1,0 +1,604 @@
+{
+	"data": [
+		{
+			"nomor": 1,
+			"judul": "Mauris",
+			"nama": "Jocelyn Robinson",
+			"penerbit": "Nulla Ante Iaculis Corp."
+		},
+		{
+			"nomor": 2,
+			"judul": "tincidunt. Donec",
+			"nama": "Merritt Reese",
+			"penerbit": "Luctus Sit LLC"
+		},
+		{
+			"nomor": 3,
+			"judul": "risus.",
+			"nama": "Christopher Talley",
+			"penerbit": "Eleifend Nunc Ltd"
+		},
+		{
+			"nomor": 4,
+			"judul": "odio. Aliquam",
+			"nama": "Palmer Clements",
+			"penerbit": "Vitae Aliquet Institute"
+		},
+		{
+			"nomor": 5,
+			"judul": "ante",
+			"nama": "Herman Jones",
+			"penerbit": "Ac Associates"
+		},
+		{
+			"nomor": 6,
+			"judul": "mauris",
+			"nama": "Oscar Olsen",
+			"penerbit": "Cum Company"
+		},
+		{
+			"nomor": 7,
+			"judul": "ullamcorper, velit",
+			"nama": "Herman Martinez",
+			"penerbit": "Urna Inc."
+		},
+		{
+			"nomor": 8,
+			"judul": "eros",
+			"nama": "Armand Turner",
+			"penerbit": "Lacus Quisque LLC"
+		},
+		{
+			"nomor": 9,
+			"judul": "iaculis",
+			"nama": "Octavia Terry",
+			"penerbit": "Arcu Vestibulum Ut Incorporated"
+		},
+		{
+			"nomor": 10,
+			"judul": "dis",
+			"nama": "Quemby Duke",
+			"penerbit": "Suspendisse Dui Fusce Incorporated"
+		},
+		{
+			"nomor": 11,
+			"judul": "arcu",
+			"nama": "Renee Rios",
+			"penerbit": "Consequat LLC"
+		},
+		{
+			"nomor": 12,
+			"judul": "gravida molestie",
+			"nama": "Herrod Fletcher",
+			"penerbit": "Erat In Inc."
+		},
+		{
+			"nomor": 13,
+			"judul": "luctus sit",
+			"nama": "Zenaida Hampton",
+			"penerbit": "Ut Erat Consulting"
+		},
+		{
+			"nomor": 14,
+			"judul": "eleifend",
+			"nama": "Jordan Whitehead",
+			"penerbit": "Eu LLP"
+		},
+		{
+			"nomor": 15,
+			"judul": "Sed eu",
+			"nama": "Hamish Combs",
+			"penerbit": "Diam Ltd"
+		},
+		{
+			"nomor": 16,
+			"judul": "molestie",
+			"nama": "Zia Reyes",
+			"penerbit": "Nunc Ac Corporation"
+		},
+		{
+			"nomor": 17,
+			"judul": "tempus",
+			"nama": "Joelle Snyder",
+			"penerbit": "Ac Tellus Suspendisse Company"
+		},
+		{
+			"nomor": 18,
+			"judul": "amet, consectetuer",
+			"nama": "Stewart Alford",
+			"penerbit": "Nec Company"
+		},
+		{
+			"nomor": 19,
+			"judul": "Nulla",
+			"nama": "Silas Berry",
+			"penerbit": "Accumsan Interdum Libero LLC"
+		},
+		{
+			"nomor": 20,
+			"judul": "lorem",
+			"nama": "Byron Boone",
+			"penerbit": "Malesuada Incorporated"
+		},
+		{
+			"nomor": 21,
+			"judul": "eget",
+			"nama": "Chancellor Le",
+			"penerbit": "Nulla Cras Eu Corp."
+		},
+		{
+			"nomor": 22,
+			"judul": "Quisque",
+			"nama": "Xantha Bray",
+			"penerbit": "Lorem Industries"
+		},
+		{
+			"nomor": 23,
+			"judul": "eu",
+			"nama": "Jin Mcbride",
+			"penerbit": "Iaculis Enim Foundation"
+		},
+		{
+			"nomor": 24,
+			"judul": "ac mattis",
+			"nama": "Price Richard",
+			"penerbit": "Scelerisque LLC"
+		},
+		{
+			"nomor": 25,
+			"judul": "nec urna",
+			"nama": "Mannix Mcfarland",
+			"penerbit": "Ac Nulla LLC"
+		},
+		{
+			"nomor": 26,
+			"judul": "penatibus",
+			"nama": "Orla Buck",
+			"penerbit": "Nibh Donec Est LLP"
+		},
+		{
+			"nomor": 27,
+			"judul": "tellus",
+			"nama": "Kai Johnson",
+			"penerbit": "Eleifend Associates"
+		},
+		{
+			"nomor": 28,
+			"judul": "consectetuer",
+			"nama": "Jack Whitley",
+			"penerbit": "Fringilla Donec Feugiat Institute"
+		},
+		{
+			"nomor": 29,
+			"judul": "eget",
+			"nama": "Jayme Ayala",
+			"penerbit": "Ac Metus Vitae Incorporated"
+		},
+		{
+			"nomor": 30,
+			"judul": "ipsum dolor",
+			"nama": "Yardley Dawson",
+			"penerbit": "Accumsan Laoreet Ipsum Consulting"
+		},
+		{
+			"nomor": 31,
+			"judul": "Fusce diam",
+			"nama": "Lara Schmidt",
+			"penerbit": "Diam Vel Arcu Limited"
+		},
+		{
+			"nomor": 32,
+			"judul": "porttitor interdum.",
+			"nama": "Tara Monroe",
+			"penerbit": "Morbi Incorporated"
+		},
+		{
+			"nomor": 33,
+			"judul": "Ut",
+			"nama": "Kevin Mclaughlin",
+			"penerbit": "Mauris LLP"
+		},
+		{
+			"nomor": 34,
+			"judul": "aliquam",
+			"nama": "Yvette Newton",
+			"penerbit": "Eget Volutpat Ornare Consulting"
+		},
+		{
+			"nomor": 35,
+			"judul": "et libero.",
+			"nama": "Vance Charles",
+			"penerbit": "Amet LLP"
+		},
+		{
+			"nomor": 36,
+			"judul": "ligula. Nullam",
+			"nama": "Teagan Santana",
+			"penerbit": "Luctus Vulputate Corp."
+		},
+		{
+			"nomor": 37,
+			"judul": "non",
+			"nama": "Hyatt Grimes",
+			"penerbit": "Metus Sit Ltd"
+		},
+		{
+			"nomor": 38,
+			"judul": "Sed eget",
+			"nama": "Jescie Burton",
+			"penerbit": "Pretium Inc."
+		},
+		{
+			"nomor": 39,
+			"judul": "pretium",
+			"nama": "Kaden Tanner",
+			"penerbit": "Turpis Vitae Purus Ltd"
+		},
+		{
+			"nomor": 40,
+			"judul": "facilisi.",
+			"nama": "Ella Lopez",
+			"penerbit": "Vitae Orci Phasellus Incorporated"
+		},
+		{
+			"nomor": 41,
+			"judul": "ornare",
+			"nama": "Griffith Martin",
+			"penerbit": "Aliquam Fringilla Cursus Associates"
+		},
+		{
+			"nomor": 42,
+			"judul": "diam dictum",
+			"nama": "Breanna Bowen",
+			"penerbit": "Proin Mi Aliquam Ltd"
+		},
+		{
+			"nomor": 43,
+			"judul": "pellentesque.",
+			"nama": "Colleen Sanders",
+			"penerbit": "Velit Sed Corporation"
+		},
+		{
+			"nomor": 44,
+			"judul": "non quam.",
+			"nama": "Lara Randolph",
+			"penerbit": "Malesuada Integer Id Associates"
+		},
+		{
+			"nomor": 45,
+			"judul": "consectetuer",
+			"nama": "Remedios Fowler",
+			"penerbit": "Sed Industries"
+		},
+		{
+			"nomor": 46,
+			"judul": "amet,",
+			"nama": "Ulla Ewing",
+			"penerbit": "Volutpat LLP"
+		},
+		{
+			"nomor": 47,
+			"judul": "nibh sit",
+			"nama": "Chase Watkins",
+			"penerbit": "Mauris Institute"
+		},
+		{
+			"nomor": 48,
+			"judul": "lectus sit",
+			"nama": "Otto Stephens",
+			"penerbit": "A Enim Incorporated"
+		},
+		{
+			"nomor": 49,
+			"judul": "nulla. Integer",
+			"nama": "Anne Noel",
+			"penerbit": "Aliquet Vel Vulputate LLC"
+		},
+		{
+			"nomor": 50,
+			"judul": "Integer",
+			"nama": "Amanda Pierce",
+			"penerbit": "Nibh Vulputate Mauris Incorporated"
+		},
+		{
+			"nomor": 51,
+			"judul": "ultrices. Duis",
+			"nama": "Jayme Reid",
+			"penerbit": "Erat Volutpat Nulla Consulting"
+		},
+		{
+			"nomor": 52,
+			"judul": "nulla. Donec",
+			"nama": "Lois Alford",
+			"penerbit": "A Tortor Nunc Associates"
+		},
+		{
+			"nomor": 53,
+			"judul": "purus,",
+			"nama": "Audrey Cooke",
+			"penerbit": "Convallis In Cursus Foundation"
+		},
+		{
+			"nomor": 54,
+			"judul": "velit egestas",
+			"nama": "Robin Lawrence",
+			"penerbit": "Sem Company"
+		},
+		{
+			"nomor": 55,
+			"judul": "et libero.",
+			"nama": "Eric Mclean",
+			"penerbit": "Lectus Pede Et Institute"
+		},
+		{
+			"nomor": 56,
+			"judul": "Cras dolor",
+			"nama": "Phyllis Avila",
+			"penerbit": "In Inc."
+		},
+		{
+			"nomor": 57,
+			"judul": "Cum sociis",
+			"nama": "Sydnee Levy",
+			"penerbit": "Cursus LLC"
+		},
+		{
+			"nomor": 58,
+			"judul": "pede,",
+			"nama": "Lenore Hendrix",
+			"penerbit": "Orci Ut Semper PC"
+		},
+		{
+			"nomor": 59,
+			"judul": "nonummy ipsum",
+			"nama": "Demetrius Warren",
+			"penerbit": "Vestibulum Ante Ipsum Corp."
+		},
+		{
+			"nomor": 60,
+			"judul": "ut, pharetra",
+			"nama": "Edward Cobb",
+			"penerbit": "Ridiculus Mus LLC"
+		},
+		{
+			"nomor": 61,
+			"judul": "nec",
+			"nama": "Carissa Holloway",
+			"penerbit": "Mauris Ut LLC"
+		},
+		{
+			"nomor": 62,
+			"judul": "nonummy ac,",
+			"nama": "Eleanor Summers",
+			"penerbit": "Eu Turpis Corporation"
+		},
+		{
+			"nomor": 63,
+			"judul": "sed",
+			"nama": "Henry Irwin",
+			"penerbit": "Sapien Corp."
+		},
+		{
+			"nomor": 64,
+			"judul": "Donec",
+			"nama": "Nehru Swanson",
+			"penerbit": "In Tincidunt PC"
+		},
+		{
+			"nomor": 65,
+			"judul": "diam",
+			"nama": "Philip Mckenzie",
+			"penerbit": "Conubia Associates"
+		},
+		{
+			"nomor": 66,
+			"judul": "mus.",
+			"nama": "Teegan Horton",
+			"penerbit": "Vivamus Rhoncus Donec PC"
+		},
+		{
+			"nomor": 67,
+			"judul": "est,",
+			"nama": "Britanni Murray",
+			"penerbit": "Convallis Ligula Corp."
+		},
+		{
+			"nomor": 68,
+			"judul": "venenatis a,",
+			"nama": "Alana Daugherty",
+			"penerbit": "Et Associates"
+		},
+		{
+			"nomor": 69,
+			"judul": "Mauris",
+			"nama": "Beatrice Sykes",
+			"penerbit": "Nunc Laoreet Lectus Ltd"
+		},
+		{
+			"nomor": 70,
+			"judul": "ornare placerat,",
+			"nama": "Tanek Sherman",
+			"penerbit": "Dui Lectus Company"
+		},
+		{
+			"nomor": 71,
+			"judul": "blandit",
+			"nama": "Mikayla Joseph",
+			"penerbit": "Ipsum Suspendisse Ltd"
+		},
+		{
+			"nomor": 72,
+			"judul": "faucibus. Morbi",
+			"nama": "Ciaran Griffin",
+			"penerbit": "Tincidunt Ltd"
+		},
+		{
+			"nomor": 73,
+			"judul": "mauris.",
+			"nama": "Eden Hyde",
+			"penerbit": "Ultricies Inc."
+		},
+		{
+			"nomor": 74,
+			"judul": "augue malesuada",
+			"nama": "Slade Holden",
+			"penerbit": "Pede LLC"
+		},
+		{
+			"nomor": 75,
+			"judul": "sit amet,",
+			"nama": "Fatima Trevino",
+			"penerbit": "At Pretium Associates"
+		},
+		{
+			"nomor": 76,
+			"judul": "nibh. Donec",
+			"nama": "Justina Puckett",
+			"penerbit": "Enim Diam Vel Associates"
+		},
+		{
+			"nomor": 77,
+			"judul": "pharetra.",
+			"nama": "Nigel Dean",
+			"penerbit": "Aliquet Metus Ltd"
+		},
+		{
+			"nomor": 78,
+			"judul": "Nulla tempor",
+			"nama": "Quinlan Garrison",
+			"penerbit": "Proin Velit LLC"
+		},
+		{
+			"nomor": 79,
+			"judul": "Integer in",
+			"nama": "Drake Collins",
+			"penerbit": "Est Ac Industries"
+		},
+		{
+			"nomor": 80,
+			"judul": "per",
+			"nama": "Miranda Travis",
+			"penerbit": "Molestie Incorporated"
+		},
+		{
+			"nomor": 81,
+			"judul": "Sed molestie.",
+			"nama": "Yuli Haney",
+			"penerbit": "A Scelerisque Company"
+		},
+		{
+			"nomor": 82,
+			"judul": "nunc",
+			"nama": "Larissa Rasmussen",
+			"penerbit": "Quam Pellentesque Consulting"
+		},
+		{
+			"nomor": 83,
+			"judul": "risus",
+			"nama": "Idona Rhodes",
+			"penerbit": "Vestibulum Neque Sed Inc."
+		},
+		{
+			"nomor": 84,
+			"judul": "amet",
+			"nama": "Meghan Pace",
+			"penerbit": "Quisque Corp."
+		},
+		{
+			"nomor": 85,
+			"judul": "mauris ipsum",
+			"nama": "Reece Myers",
+			"penerbit": "Tempus Risus Donec Corporation"
+		},
+		{
+			"nomor": 86,
+			"judul": "placerat. Cras",
+			"nama": "Knox Vega",
+			"penerbit": "Dictum Placerat Augue Company"
+		},
+		{
+			"nomor": 87,
+			"judul": "neque venenatis",
+			"nama": "Joel Rosales",
+			"penerbit": "Elit Associates"
+		},
+		{
+			"nomor": 88,
+			"judul": "justo",
+			"nama": "Warren Johnston",
+			"penerbit": "Lorem Inc."
+		},
+		{
+			"nomor": 89,
+			"judul": "eu dui.",
+			"nama": "Sigourney Garrett",
+			"penerbit": "Praesent Company"
+		},
+		{
+			"nomor": 90,
+			"judul": "libero. Donec",
+			"nama": "Kennan Diaz",
+			"penerbit": "Lacus Nulla Tincidunt Company"
+		},
+		{
+			"nomor": 91,
+			"judul": "augue porttitor",
+			"nama": "Meghan Morrow",
+			"penerbit": "Donec PC"
+		},
+		{
+			"nomor": 92,
+			"judul": "cursus et,",
+			"nama": "Regan Vargas",
+			"penerbit": "Nisi Cum Corp."
+		},
+		{
+			"nomor": 93,
+			"judul": "Maecenas mi",
+			"nama": "Mary Haley",
+			"penerbit": "Malesuada Corp."
+		},
+		{
+			"nomor": 94,
+			"judul": "sem",
+			"nama": "Ethan Cabrera",
+			"penerbit": "Mus Proin Industries"
+		},
+		{
+			"nomor": 95,
+			"judul": "Aliquam tincidunt,",
+			"nama": "Hilel Hunter",
+			"penerbit": "Sit Amet Inc."
+		},
+		{
+			"nomor": 96,
+			"judul": "velit.",
+			"nama": "Benedict Roy",
+			"penerbit": "Suspendisse Sagittis Limited"
+		},
+		{
+			"nomor": 97,
+			"judul": "nisi. Aenean",
+			"nama": "Aristotle Moody",
+			"penerbit": "Purus Sapien Gravida Incorporated"
+		},
+		{
+			"nomor": 98,
+			"judul": "turpis. Aliquam",
+			"nama": "Diana Thompson",
+			"penerbit": "Velit Dui Company"
+		},
+		{
+			"nomor": 99,
+			"judul": "in",
+			"nama": "Tashya Chaney",
+			"penerbit": "Magna Institute"
+		},
+		{
+			"nomor": 100,
+			"judul": "a, auctor",
+			"nama": "Stella Alexander",
+			"penerbit": "Tellus Nunc Corp."
+		}
+	]
+}

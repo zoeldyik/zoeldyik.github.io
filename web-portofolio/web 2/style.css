@@ -187,6 +187,7 @@ div.dataTables_filter label input:focus{
     color: #fff;
     background-color: #2A9D8F;
     border-color: #2A9D8F;
+    box-shadow: 0 0 1px 1px rgba(42, 157, 144,0.6);
 }
 
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {

@@ -1,0 +1,42 @@
+#navbar{
+    transition: 0.5s;
+}
+
+#jumbo{
+    min-height: 400px;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 40px;
+    background-image: url('https://images.pexels.com/photos/2228561/pexels-photo-2228561.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-size: cover;
+}
+#jumbo .btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#teks{
+    height: 100vh !important;
+    display: flex; 
+    align-items: center;
+}
+
+
+@media(min-width:992px){
+
+    #jumbo{
+        min-height: 600px;
+    }
+
+    #navbarNav ul li a{
+        font-size: 16px;
+    }
+    
+    #jumbo{
+        margin-top: 0;
+        height: 550px;
+    }
+
+}

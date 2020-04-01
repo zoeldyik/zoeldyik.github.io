@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi dengan Javascript</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background-color: rgb(21, 22, 21);
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            cursor: pointer;
+        }
+
+        h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            font-family: 'Comic Neue', cursive;
+            z-index: 1000;
+        }
+
+
+        span {
+            display: block;
+            position: absolute;
+            /* background-color: darkseagreen; */
+            pointer-events: none;
+            border-radius: 50%;
+            animation: fadeUp 2s forwards;
+            background-image: url('https://image.flaticon.com/icons/svg/2768/2768000.svg');
+            background-size: cover;
+        }
+
+
+
+        @keyframes fadeUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-1000%);
+                opacity: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Gerakan Mouse dan Animasi akan tampil</h2>
+
+
+
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+
+            // tentukan x offset dan y offset
+            let x = e.offsetX;
+            let y = e.offsetY;
+            // console.log(y);
+
+            // create element
+            const obj = document.createElement('span');
+            obj.style.top = y + "px";
+            obj.style.left = x + "px";
+
+            let size = Math.random() * 80 + 20;
+            obj.style.width = size + "px";
+            obj.style.height = size + "px";
+            // ambil element body
+            document.querySelector("body").appendChild(obj);
+
+        })
+    </script>
+</body>
+
+</html>

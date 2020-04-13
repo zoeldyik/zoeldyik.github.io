@@ -1,0 +1,157 @@
+body{
+    background-color: whitesmoke;
+}
+
+.bg-indigo{
+    background-color: #6610f2;
+}
+
+.bg-purple{
+    background-color: #6f42c1;
+}
+
+.bg-teal{
+    background-color: #20c997;
+}
+
+.text-purple{
+    color: #6f42c1;
+}
+
+.text-indigo{
+    color: #6610f2;
+}
+
+.text-teal{
+    color: #20c997;
+}
+
+
+
+/* ------------------------------------------------- */
+body{
+    position: relative;
+}
+
+main{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../Liquid-Cheese2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main .teks{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main .teks h1{
+    font-size: 2em;
+}
+
+main .teks .nav a:hover{
+    color: #351b69;
+}
+
+.undangan,.lokasi,.galeri{
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 2000;
+    background-color: #250757;
+    background-image: url('../Rainbow-Vortex.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-y: auto;
+    transition: all 500ms;
+}
+
+
+.undangan{
+    margin-left: -4000px; 
+}
+
+.lokasi{
+    top: 4000px;
+}
+
+.galeri{
+    left: 4000px;
+}
+
+.navigasi .material-icons{
+    font-size: 40px;
+    font-weight: bolder;
+    margin-left: -10px;
+}
+
+
+
+
+/* lokasi */
+.lokasi iframe{
+    width: 100%;
+    height: 400px;
+}
+
+
+
+
+/* galeri */
+
+.galeri .wrap-carousel{
+    border: 2px solid white;
+}
+
+.galeri .carousel img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.open{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+
+
+@media(min-width:992px){
+    main .teks{
+        top: 80%;
+    }
+
+    main .teks h1{
+        font-size: 2.4em;
+    }
+
+    .undangan,.lokasi,.galeri{
+       overflow-y: hidden;
+    }
+
+    .lokasi iframe{
+        height: 500px;
+    }
+
+    .galeri .wrap-carousel{
+        border: 4px solid white;
+    }
+
+    .galeri .carousel img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
